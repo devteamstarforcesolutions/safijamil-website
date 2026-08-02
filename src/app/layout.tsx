@@ -87,9 +87,9 @@ const personJsonLd = {
   telephone: "+92 344 3047362",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Edmond",
-    addressRegion: "Oklahoma",
-    addressCountry: "US",
+    addressLocality: "Lahore",
+    addressRegion: "Punjab",
+    addressCountry: "PK",
   },
   alumniOf: {
     "@type": "CollegeOrUniversity",
@@ -97,7 +97,6 @@ const personJsonLd = {
   },
   sameAs: [
     "https://linkedin.com/in/safiullahjamil",
-    "https://www.fiverr.com/safiullahjamil",
   ],
   knowsAbout: [
     "Google Ads",

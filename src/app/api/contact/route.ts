@@ -13,8 +13,21 @@ type Payload = {
   company?: unknown; // honeypot — real people never fill this
 };
 
-function fail(error: string, status = 400) {
-  return NextResponse.json({ ok: false, error }, { status });
+function fail(error: string, status = 400, detail?: string) {
+  return NextResponse.json({ ok: false, error, ...(detail ? { detail } : {}) }, { status });
+}
+
+/** Quick config check: visit /api/contact in a browser. Never exposes the key itself. */
+export async function GET() {
+  return NextResponse.json({
+    ok: true,
+    provider: process.env.RESEND_API_KEY
+      ? "resend"
+      : process.env.WEB3FORMS_ACCESS_KEY
+        ? "web3forms"
+        : "none",
+    configured: Boolean(process.env.RESEND_API_KEY || process.env.WEB3FORMS_ACCESS_KEY),
+  });
 }
 
 function buildBody(name: string, email: string, message: string) {
@@ -117,7 +130,8 @@ export async function POST(request: Request) {
     console.error("Contact form delivery failed:", err);
     return fail(
       "Your message couldn't be sent right now. Please email safijamil.dev@gmail.com directly.",
-      502
+      502,
+      err instanceof Error ? err.message : String(err)
     );
   }
 }

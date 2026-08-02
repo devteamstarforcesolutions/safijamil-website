@@ -105,7 +105,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             <p style={{ fontSize: 16.5, lineHeight: 1.75, color: "var(--text-2)", margin: "0 0 28px" }}>
               I&apos;m Safi Jamil — a brand strategist and Google Ads specialist in the PPC industry
               since 2018, currently managing $261,855+ in active Google &amp; Meta Ads spend, with
-              US-client experience and Level 2 Seller status on Fiverr. I bring that same
+              hands-on experience running accounts for US-based clients. I bring that same
               full-funnel discipline to businesses in {c.name}.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 8 }}>

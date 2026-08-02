@@ -27,6 +27,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const [detail, setDetail] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -56,12 +57,14 @@ export default function ContactForm() {
       } else {
         setStatus("error");
         setError(body.error || "Your message couldn't be sent. Please try again.");
+        setDetail(body.detail || `HTTP ${res.status}`);
       }
-    } catch {
+    } catch (err) {
       setStatus("error");
       setError(
         "Couldn't reach the server — check your connection, or email safijamil.dev@gmail.com directly."
       );
+      setDetail(err instanceof Error ? err.message : String(err));
     }
   }
 
@@ -189,6 +192,11 @@ export default function ContactForm() {
             Email me directly
           </a>
           .
+          {detail && typeof window !== "undefined" && window.location.search.includes("debug=1") && (
+            <span style={{ display: "block", marginTop: 8, fontFamily: "monospace", fontSize: 12.5, color: "#FFD2D2", wordBreak: "break-word" }}>
+              {detail}
+            </span>
+          )}
         </p>
       )}
 
