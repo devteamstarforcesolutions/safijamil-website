@@ -46,7 +46,15 @@ function buildBody(name: string, email: string, message: string) {
 async function sendViaWeb3Forms(key: string, name: string, email: string, message: string) {
   const res = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      // Web3Forms is behind Cloudflare; a request with no browser-ish headers
+      // is treated as a bot and rejected with 403.
+      "User-Agent": "Mozilla/5.0 (compatible; safijamil.com contact form)",
+      Origin: "https://safijamil.com",
+      Referer: "https://safijamil.com/",
+    },
     body: JSON.stringify({
       access_key: key,
       subject: SUBJECT,

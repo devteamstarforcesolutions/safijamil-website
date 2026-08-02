@@ -22,6 +22,9 @@ const fieldStyle: React.CSSProperties = {
   fontFamily: "var(--font-ibm-plex-sans), sans-serif",
 };
 
+/** Public by design — Web3Forms keys are meant to be visible in client code. */
+const PUBLIC_WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
 type Status = "idle" | "sending" | "sent" | "error";
 
 export default function ContactForm() {
@@ -38,26 +41,54 @@ export default function ContactForm() {
     setStatus("sending");
     setError("");
 
+    // Bot filled the hidden field — pretend success and drop it.
+    if (String(data.get("company") || "").trim()) {
+      setStatus("sent");
+      form.reset();
+      return;
+    }
+
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: data.get("name"),
-          email: data.get("email"),
-          message: data.get("message"),
-          company: data.get("company"),
-        }),
-      });
+      // Web3Forms expects to be called from the browser (its key is public by
+      // design, and its bot filter rejects header-less server calls). When the
+      // public key is present we post straight there; otherwise the server
+      // route handles it — that path also covers Resend.
+      const res = PUBLIC_WEB3FORMS_KEY
+        ? await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Accept: "application/json" },
+            body: JSON.stringify({
+              access_key: PUBLIC_WEB3FORMS_KEY,
+              subject: "New enquiry from safijamil.com",
+              from_name: "safijamil.com contact form",
+              replyto: data.get("email"),
+              name: data.get("name"),
+              email: data.get("email"),
+              message: data.get("message"),
+            }),
+          })
+        : await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: data.get("name"),
+              email: data.get("email"),
+              message: data.get("message"),
+              company: data.get("company"),
+            }),
+          });
       const body = await res.json().catch(() => ({}));
 
-      if (res.ok && body.ok) {
+      // Web3Forms replies { success: true }; our own route replies { ok: true }.
+      if (res.ok && (body.ok || body.success)) {
         setStatus("sent");
         form.reset();
       } else {
         setStatus("error");
-        setError(body.error || "Your message couldn't be sent. Please try again.");
-        setDetail(body.detail || `HTTP ${res.status}`);
+        setError(
+          body.error || "Your message couldn't be sent. Please try again."
+        );
+        setDetail(body.detail || body.message || `HTTP ${res.status}`);
       }
     } catch (err) {
       setStatus("error");
