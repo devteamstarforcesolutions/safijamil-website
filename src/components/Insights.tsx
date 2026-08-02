@@ -2,21 +2,9 @@ import { posts } from "@/data/content";
 
 export default function Insights() {
   return (
-    <section
-      id="blog"
-      style={{ padding: "110px 48px", borderTop: "1px solid rgba(92,173,255,.08)" }}
-    >
+    <section id="blog" className="section">
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div
-          data-reveal=""
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "end",
-            marginBottom: 56,
-            gap: 24,
-          }}
-        >
+        <div data-reveal="" className="insights-head">
           <div>
             <div
               style={{
@@ -31,12 +19,11 @@ export default function Insights() {
               06 — Insights
             </div>
             <h2
+              className="h2"
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
-                fontSize: 40,
                 fontWeight: 700,
                 margin: 0,
-                letterSpacing: -0.5,
               }}
             >
               Writing, coming soon
@@ -56,7 +43,7 @@ export default function Insights() {
             In the works
           </span>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+        <div className="posts-grid">
           {posts.map((p) => (
             <div
               data-reveal=""

@@ -6,13 +6,13 @@ export default function Hero() {
   return (
     <header
       id="top"
+      className="hero-pad"
       style={{
         position: "relative",
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
-        padding: "120px 48px 80px",
       }}
     >
       <div
@@ -41,18 +41,7 @@ export default function Hero() {
           pointerEvents: "none",
         }}
       />
-      <div
-        style={{
-          position: "relative",
-          display: "grid",
-          gridTemplateColumns: "1.15fr .85fr",
-          gap: 64,
-          alignItems: "center",
-          maxWidth: 1200,
-          margin: "0 auto",
-          width: "100%",
-        }}
-      >
+      <div className="hero-grid">
         <div>
           <div
             style={{
@@ -81,13 +70,11 @@ export default function Hero() {
             Available for freelance projects
           </div>
           <h1
+            className="hero-h1"
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
-              fontSize: 60,
-              lineHeight: 1.06,
               fontWeight: 700,
               margin: "0 0 22px",
-              letterSpacing: -1,
             }}
           >
             Turning ad spend into{" "}
@@ -109,7 +96,7 @@ export default function Hero() {
             brands generate sales and leads through Google Ads and Meta campaigns, with full-funnel
             ownership from tracking to testing.
           </p>
-          <div style={{ display: "flex", gap: 16, marginBottom: 56 }}>
+          <div className="hero-ctas">
             <a
               href="#work"
               className="btn-primary"
@@ -140,7 +127,7 @@ export default function Hero() {
               Get in touch
             </a>
           </div>
-          <div style={{ display: "flex", gap: 48 }}>
+          <div className="hero-stats">
             <div>
               <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "#5CADFF" }}>
                 $261K+
@@ -214,9 +201,8 @@ export default function Hero() {
             width={360}
             height={440}
             priority
+            className="hero-photo"
             style={{
-              width: 360,
-              height: 440,
               objectFit: "cover",
               objectPosition: "top",
               border: "1px solid rgba(92,173,255,.35)",

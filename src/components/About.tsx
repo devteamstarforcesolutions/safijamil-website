@@ -1,19 +1,7 @@
 export default function About() {
   return (
-    <section
-      id="about"
-      style={{ padding: "110px 48px", borderTop: "1px solid rgba(92,173,255,.08)" }}
-    >
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: ".9fr 1.1fr",
-          gap: 72,
-          alignItems: "start",
-        }}
-      >
+    <section id="about" className="section">
+      <div className="about-grid" style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div data-reveal="">
           <div
             style={{
@@ -28,12 +16,11 @@ export default function About() {
             01 — About
           </div>
           <h2
+            className="h2"
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
-              fontSize: 40,
               fontWeight: 700,
               margin: "0 0 24px",
-              letterSpacing: -0.5,
             }}
           >
             Marketer by craft, engineer by training

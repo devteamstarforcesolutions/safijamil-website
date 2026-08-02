@@ -1,6 +1,7 @@
 export default function Nav() {
   return (
     <nav
+      className="nav-bar"
       style={{
         position: "fixed",
         top: 0,
@@ -10,7 +11,6 @@ export default function Nav() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "16px 48px",
         background: "rgba(11,15,23,.82)",
         backdropFilter: "blur(14px)",
         borderBottom: "1px solid rgba(92,173,255,.12)",

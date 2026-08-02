@@ -4,12 +4,8 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      style={{
-        padding: "110px 48px 90px",
-        borderTop: "1px solid rgba(92,173,255,.08)",
-        position: "relative",
-        overflow: "hidden",
-      }}
+      className="section"
+      style={{ position: "relative", overflow: "hidden" }}
     >
       <div
         style={{
@@ -23,17 +19,7 @@ export default function Contact() {
           pointerEvents: "none",
         }}
       />
-      <div
-        style={{
-          position: "relative",
-          maxWidth: 1200,
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 72,
-          alignItems: "start",
-        }}
-      >
+      <div className="contact-grid">
         <div data-reveal="">
           <div
             style={{
@@ -48,12 +34,11 @@ export default function Contact() {
             07 — Contact
           </div>
           <h2
+            className="h2--xl"
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
-              fontSize: 44,
               fontWeight: 700,
               margin: "0 0 22px",
-              letterSpacing: -0.5,
             }}
           >
             Let&apos;s grow something together

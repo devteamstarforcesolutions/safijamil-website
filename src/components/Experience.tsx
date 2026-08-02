@@ -2,10 +2,7 @@ import { jobs } from "@/data/content";
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      style={{ padding: "110px 48px", borderTop: "1px solid rgba(92,173,255,.08)" }}
-    >
+    <section id="experience" className="section">
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
         <div data-reveal="" style={{ marginBottom: 56 }}>
           <div
@@ -21,29 +18,21 @@ export default function Experience() {
             02 — Experience
           </div>
           <h2
+            className="h2"
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
-              fontSize: 40,
               fontWeight: 700,
               margin: 0,
-              letterSpacing: -0.5,
             }}
           >
             Seven years in the growth trenches
           </h2>
         </div>
-        <div
-          style={{
-            position: "relative",
-            paddingLeft: 36,
-            borderLeft: "1px solid rgba(92,173,255,.25)",
-            display: "grid",
-            gap: 44,
-          }}
-        >
+        <div className="timeline">
           {jobs.map((job) => (
             <div data-reveal="" key={job.company + job.dates} style={{ position: "relative" }}>
               <span
+                className="timeline-dot"
                 style={{
                   position: "absolute",
                   left: -42,

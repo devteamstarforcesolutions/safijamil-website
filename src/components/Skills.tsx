@@ -2,10 +2,7 @@ import { skills, tools } from "@/data/content";
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      style={{ padding: "110px 48px", borderTop: "1px solid rgba(92,173,255,.08)" }}
-    >
+    <section id="skills" className="section">
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div data-reveal="" style={{ marginBottom: 56 }}>
           <div
@@ -21,18 +18,17 @@ export default function Skills() {
             04 — Skills &amp; Stack
           </div>
           <h2
+            className="h2"
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
-              fontSize: 40,
               fontWeight: 700,
               margin: 0,
-              letterSpacing: -0.5,
             }}
           >
             Full-funnel, tool by tool
           </h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, alignItems: "start" }}>
+        <div className="skills-grid">
           <div data-reveal="" style={{ padding: 36, background: "#101826", border: "1px solid rgba(92,173,255,.14)" }}>
             <div
               style={{

@@ -35,6 +35,7 @@ export default function ContactForm() {
   return (
     <form
       data-reveal=""
+      className="contact-form-card"
       onSubmit={sendMail}
       style={{
         padding: 40,

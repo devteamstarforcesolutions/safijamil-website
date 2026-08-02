@@ -1,14 +1,8 @@
 export default function Footer() {
   return (
     <footer
-      style={{
-        padding: "32px 48px",
-        borderTop: "1px solid rgba(92,173,255,.1)",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        gap: 24,
-      }}
+      className="footer-bar"
+      style={{ borderTop: "1px solid rgba(92,173,255,.1)" }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
         <span

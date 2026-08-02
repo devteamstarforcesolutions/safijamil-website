@@ -3,10 +3,7 @@ import TiltCard from "./TiltCard";
 
 export default function CaseWork() {
   return (
-    <section
-      id="work"
-      style={{ padding: "110px 48px", borderTop: "1px solid rgba(92,173,255,.08)" }}
-    >
+    <section id="work" className="section">
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div data-reveal="" style={{ marginBottom: 56, maxWidth: 640 }}>
           <div
@@ -22,12 +19,11 @@ export default function CaseWork() {
             03 — Case Work
           </div>
           <h2
+            className="h2"
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
-              fontSize: 40,
               fontWeight: 700,
               margin: "0 0 18px",
-              letterSpacing: -0.5,
             }}
           >
             Campaigns that pay for themselves
@@ -37,7 +33,7 @@ export default function CaseWork() {
             conversion tracking, so every dollar is accountable.
           </p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }}>
+        <div className="cases-grid">
           {cases.map((c) => (
             <TiltCard className="case-card" key={c.industry}>
               <div
