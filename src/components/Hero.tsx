@@ -24,7 +24,7 @@ export default function Hero() {
           width: 560,
           height: 560,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(var(--accent-rgb),.22) 0%, rgba(var(--accent-rgb),0) 65%)",
+          background: "radial-gradient(circle, rgba(92,173,255,.22) 0%, rgba(92,173,255,0) 65%)",
           pointerEvents: "none",
         }}
       />
@@ -37,7 +37,7 @@ export default function Hero() {
           width: 640,
           height: 640,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(var(--accent2-rgb),.10) 0%, rgba(var(--accent2-rgb),0) 65%)",
+          background: "radial-gradient(circle, rgba(64,224,208,.10) 0%, rgba(64,224,208,0) 65%)",
           pointerEvents: "none",
         }}
       />
@@ -49,8 +49,8 @@ export default function Hero() {
               alignItems: "center",
               gap: 10,
               padding: "7px 16px",
-              border: "1px solid rgba(var(--accent-rgb),.35)",
-              color: "var(--accent-soft)",
+              border: "1px solid rgba(92,173,255,.35)",
+              color: "#8CC5FF",
               fontSize: 13,
               letterSpacing: 1.5,
               textTransform: "uppercase",
@@ -64,7 +64,7 @@ export default function Hero() {
                 width: 7,
                 height: 7,
                 borderRadius: "50%",
-                background: "var(--accent-2)",
+                background: "#40E0D0",
               }}
             />
             Available for freelance projects
@@ -78,7 +78,7 @@ export default function Hero() {
             }}
           >
             Turning ad spend into{" "}
-            <span style={{ color: "var(--accent)", textShadow: "0 0 32px rgba(var(--accent-rgb),.45)" }}>
+            <span style={{ color: "#5CADFF", textShadow: "0 0 32px rgba(92,173,255,.45)" }}>
               measurable growth
             </span>
           </h1>
@@ -86,7 +86,7 @@ export default function Hero() {
             style={{
               fontSize: 19,
               lineHeight: 1.65,
-              color: "var(--text-2)",
+              color: "#B7C2D4",
               maxWidth: 540,
               margin: "0 0 36px",
               textWrap: "pretty",
@@ -104,11 +104,11 @@ export default function Hero() {
               style={{
                 display: "inline-block",
                 padding: "15px 32px",
-                background: "var(--accent)",
-                color: "var(--on-accent)",
+                background: "#5CADFF",
+                color: "#06090F",
                 fontWeight: 600,
                 fontSize: 16,
-                boxShadow: "0 0 32px rgba(var(--accent-rgb),.4)",
+                boxShadow: "0 0 32px rgba(92,173,255,.4)",
               }}
             >
               See my work
@@ -119,8 +119,8 @@ export default function Hero() {
               style={{
                 display: "inline-block",
                 padding: "15px 32px",
-                border: "1px solid rgba(var(--accent-rgb),.4)",
-                color: "var(--text)",
+                border: "1px solid rgba(92,173,255,.4)",
+                color: "#E8EDF5",
                 fontWeight: 500,
                 fontSize: 16,
               }}
@@ -130,23 +130,23 @@ export default function Hero() {
           </div>
           <div className="hero-stats">
             <div>
-              <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "var(--accent)" }}>
+              <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "#5CADFF" }}>
                 $261K+
               </div>
-              <div style={{ fontSize: 13.5, color: "var(--muted)", marginTop: 4 }}>Active ad spend managed</div>
+              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>Active ad spend managed</div>
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "var(--accent)" }}>
+              <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "#5CADFF" }}>
                 Since 2018
               </div>
-              <div style={{ fontSize: 13.5, color: "var(--muted)", marginTop: 4 }}>In the PPC industry</div>
+              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>In the PPC industry</div>
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "var(--accent)" }}>
+              <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "#5CADFF" }}>
                 Level 2
               </div>
-              <div style={{ fontSize: 13.5, color: "var(--muted)", marginTop: 4 }}>
-                <a href="https://www.fiverr.com/safiullahjamil" target="_blank" rel="noopener noreferrer" style={{ color: "var(--muted)", textDecoration: "underline", textUnderlineOffset: 3 }}>
+              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>
+                <a href="https://www.fiverr.com/safiullahjamil" target="_blank" rel="noopener noreferrer" style={{ color: "#8493A8", textDecoration: "underline", textUnderlineOffset: 3 }}>
                   Fiverr seller
                 </a>
               </div>
@@ -159,7 +159,7 @@ export default function Hero() {
             style={{
               position: "absolute",
               inset: -36,
-              border: "1px solid rgba(var(--accent-rgb),.25)",
+              border: "1px solid rgba(92,173,255,.25)",
               borderRadius: "50%",
               pointerEvents: "none",
             }}
@@ -172,8 +172,8 @@ export default function Hero() {
                 width: 9,
                 height: 9,
                 borderRadius: "50%",
-                background: "var(--accent)",
-                boxShadow: "0 0 14px var(--accent)",
+                background: "#5CADFF",
+                boxShadow: "0 0 14px #5CADFF",
               }}
             />
           </div>
@@ -182,7 +182,7 @@ export default function Hero() {
             style={{
               position: "absolute",
               inset: -70,
-              border: "1px dashed rgba(var(--accent2-rgb),.2)",
+              border: "1px dashed rgba(64,224,208,.2)",
               borderRadius: "50%",
               pointerEvents: "none",
             }}
@@ -195,8 +195,8 @@ export default function Hero() {
                 width: 7,
                 height: 7,
                 borderRadius: "50%",
-                background: "var(--accent-2)",
-                boxShadow: "0 0 12px var(--accent-2)",
+                background: "#40E0D0",
+                boxShadow: "0 0 12px #40E0D0",
               }}
             />
           </div>
@@ -210,8 +210,8 @@ export default function Hero() {
             style={{
               objectFit: "cover",
               objectPosition: "top",
-              border: "1px solid rgba(var(--accent-rgb),.35)",
-              boxShadow: "0 24px 80px rgba(16,40,90,.16), 0 0 60px rgba(var(--accent-rgb),.18)",
+              border: "1px solid rgba(92,173,255,.35)",
+              boxShadow: "0 24px 80px rgba(0,0,0,.6), 0 0 60px rgba(92,173,255,.18)",
               display: "block",
             }}
           />
@@ -221,14 +221,14 @@ export default function Hero() {
               bottom: -18,
               right: 6,
               padding: "12px 18px",
-              background: "var(--card)",
-              border: "1px solid rgba(var(--accent-rgb),.3)",
+              background: "#101826",
+              border: "1px solid rgba(92,173,255,.3)",
               fontSize: 13,
-              boxShadow: "0 12px 40px rgba(16,40,90,.12)",
+              boxShadow: "0 12px 40px rgba(0,0,0,.5)",
             }}
           >
-            <span style={{ color: "var(--accent-2)", fontWeight: 600 }}>▲ Lower CPA</span>{" "}
-            <span style={{ color: "var(--muted)" }}>· AI-driven optimization</span>
+            <span style={{ color: "#40E0D0", fontWeight: 600 }}>▲ Lower CPA</span>{" "}
+            <span style={{ color: "#8493A8" }}>· AI-driven optimization</span>
           </div>
         </HeroTilt>
       </div>

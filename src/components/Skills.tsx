@@ -10,7 +10,7 @@ export default function Skills() {
               fontFamily: "var(--font-space-grotesk), sans-serif",
               fontSize: 13,
               letterSpacing: 2.5,
-              color: "var(--accent)",
+              color: "#5CADFF",
               textTransform: "uppercase",
               marginBottom: 16,
             }}
@@ -29,13 +29,13 @@ export default function Skills() {
           </h2>
         </div>
         <div className="skills-grid">
-          <div data-reveal="" style={{ padding: 36, background: "var(--card)", border: "1px solid rgba(var(--accent-rgb),.14)" }}>
+          <div data-reveal="" style={{ padding: 36, background: "#101826", border: "1px solid rgba(92,173,255,.14)" }}>
             <div
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: 14,
                 letterSpacing: 1.5,
-                color: "var(--accent-soft)",
+                color: "#8CC5FF",
                 textTransform: "uppercase",
                 marginBottom: 22,
               }}
@@ -49,8 +49,8 @@ export default function Skills() {
                   className="skill-chip"
                   style={{
                     padding: "9px 16px",
-                    border: "1px solid rgba(var(--accent-rgb),.3)",
-                    color: "var(--text-2)",
+                    border: "1px solid rgba(92,173,255,.3)",
+                    color: "#D6E4F5",
                     fontSize: 14,
                   }}
                 >
@@ -63,8 +63,8 @@ export default function Skills() {
             data-reveal=""
             style={{
               padding: 36,
-              background: "var(--card)",
-              border: "1px solid rgba(var(--accent-rgb),.14)",
+              background: "#101826",
+              border: "1px solid rgba(92,173,255,.14)",
               display: "grid",
               gap: 18,
             }}
@@ -74,7 +74,7 @@ export default function Skills() {
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: 14,
                 letterSpacing: 1.5,
-                color: "var(--accent-soft)",
+                color: "#8CC5FF",
                 textTransform: "uppercase",
                 marginBottom: 4,
               }}
@@ -88,12 +88,12 @@ export default function Skills() {
                   display: "flex",
                   justifyContent: "space-between",
                   gap: 16,
-                  borderBottom: "1px solid rgba(var(--accent-rgb),.1)",
+                  borderBottom: "1px solid rgba(92,173,255,.1)",
                   paddingBottom: 14,
                 }}
               >
-                <span style={{ fontSize: 15.5, color: "var(--text)", fontWeight: 500 }}>{t.name}</span>
-                <span style={{ fontSize: 14, color: "var(--muted)", textAlign: "right" }}>{t.role}</span>
+                <span style={{ fontSize: 15.5, color: "#E8EDF5", fontWeight: 500 }}>{t.name}</span>
+                <span style={{ fontSize: 14, color: "#8493A8", textAlign: "right" }}>{t.role}</span>
               </div>
             ))}
           </div>

@@ -11,12 +11,12 @@ export default function Nav() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        background: "var(--nav-bg)",
+        background: "rgba(11,15,23,.82)",
         backdropFilter: "blur(14px)",
-        borderBottom: "1px solid rgba(var(--accent-rgb),.12)",
+        borderBottom: "1px solid rgba(92,173,255,.12)",
       }}
     >
-      <a href="#top" style={{ display: "flex", alignItems: "center", gap: 12, color: "var(--text)" }}>
+      <a href="#top" style={{ display: "flex", alignItems: "center", gap: 12, color: "#E8EDF5" }}>
         <span
           style={{
             display: "flex",
@@ -24,13 +24,13 @@ export default function Nav() {
             justifyContent: "center",
             width: 40,
             height: 40,
-            border: "1.5px solid var(--accent)",
-            color: "var(--accent)",
+            border: "1.5px solid #5CADFF",
+            color: "#5CADFF",
             fontFamily: "var(--font-space-grotesk), sans-serif",
             fontWeight: 700,
             fontSize: 17,
             letterSpacing: 0.5,
-            boxShadow: "0 0 18px rgba(var(--accent-rgb),.35), inset 0 0 12px rgba(var(--accent-rgb),.12)",
+            boxShadow: "0 0 18px rgba(92,173,255,.35), inset 0 0 12px rgba(92,173,255,.12)",
           }}
         >
           SJ
@@ -50,10 +50,10 @@ export default function Nav() {
           style={{
             display: "inline-block",
             padding: "10px 22px",
-            background: "var(--accent)",
-            color: "var(--on-accent)",
+            background: "#5CADFF",
+            color: "#06090F",
             fontWeight: 600,
-            boxShadow: "0 0 24px rgba(var(--accent-rgb),.4)",
+            boxShadow: "0 0 24px rgba(92,173,255,.4)",
           }}
         >
           Let&apos;s talk

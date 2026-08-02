@@ -1,20 +1,5 @@
 :root {
-  color-scheme: light;
-
-  /* Light & professional palette */
-  --bg: #f7f9fc;
-  --card: #ffffff;
-  --text: #101828;
-  --text-2: #475467;
-  --muted: #667085;
-  --placeholder: #98a2b3;
-  --accent: #1e5edc;
-  --accent-soft: #1749b8;
-  --accent-2: #0e9384;
-  --on-accent: #ffffff;
-  --accent-rgb: 30, 94, 220;
-  --accent2-rgb: 14, 147, 132;
-  --nav-bg: rgba(255, 255, 255, 0.85);
+  color-scheme: dark;
 }
 
 html {
@@ -29,8 +14,8 @@ body {
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
+  background: #0b0f17;
+  color: #e8edf5;
   font-family: var(--font-ibm-plex-sans), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,17 +33,17 @@ h4 {
 }
 
 a {
-  color: var(--accent);
+  color: #5cadff;
   text-decoration: none;
 }
 
 ::selection {
-  background: rgba(var(--accent-rgb), 0.3);
+  background: rgba(92, 173, 255, 0.3);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--placeholder);
+  color: #5a6778;
 }
 
 @keyframes orbFloat {
@@ -146,11 +131,11 @@ textarea::placeholder {
 
 /* Nav */
 .nav-link {
-  color: var(--text-2);
+  color: #b7c2d4;
   transition: color 0.15s;
 }
 .nav-link:hover {
-  color: var(--text);
+  color: #ffffff;
 }
 .nav-cta {
   transition:
@@ -158,8 +143,8 @@ textarea::placeholder {
     color 0.15s;
 }
 .nav-cta:hover {
-  background: var(--accent-soft);
-  color: var(--on-accent);
+  background: #8cc5ff;
+  color: #06090f;
 }
 
 /* Buttons */
@@ -170,7 +155,7 @@ textarea::placeholder {
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  background: var(--accent-soft);
+  background: #8cc5ff;
 }
 .btn-outline {
   transition:
@@ -179,23 +164,23 @@ textarea::placeholder {
 }
 .btn-outline:hover {
   transform: translateY(-2px);
-  border: 1px solid var(--accent);
+  border: 1px solid #5cadff;
 }
 
 /* Contact / footer links */
 .contact-link {
-  color: var(--text);
+  color: #e8edf5;
   transition: color 0.15s;
 }
 .contact-link:hover {
-  color: var(--accent-soft);
+  color: #8cc5ff;
 }
 .footer-link {
-  color: var(--muted);
+  color: #8493a8;
   transition: color 0.15s;
 }
 .footer-link:hover {
-  color: var(--accent-soft);
+  color: #8cc5ff;
 }
 
 /* Case work cards */
@@ -207,10 +192,10 @@ textarea::placeholder {
   will-change: transform;
 }
 .case-card:hover {
-  border-color: rgba(var(--accent-rgb), 0.45);
+  border-color: rgba(92, 173, 255, 0.45);
   box-shadow:
-    0 20px 60px rgba(16,40,90,.10),
-    0 0 40px rgba(var(--accent-rgb), 0.08);
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(92, 173, 255, 0.08);
 }
 
 /* Skill chips */
@@ -218,7 +203,7 @@ textarea::placeholder {
   transition: border-color 0.2s;
 }
 .skill-chip:hover {
-  border-color: var(--accent);
+  border-color: #5cadff;
 }
 
 /* Form fields */
@@ -227,7 +212,7 @@ textarea::placeholder {
   transition: border-color 0.15s;
 }
 .field:focus {
-  border-color: var(--accent);
+  border-color: #5cadff;
 }
 
 /* ---- Responsive layout ---- */
@@ -275,7 +260,7 @@ textarea::placeholder {
 
 .section {
   padding: 110px 48px;
-  border-top: 1px solid rgba(var(--accent-rgb), 0.08);
+  border-top: 1px solid rgba(92, 173, 255, 0.08);
 }
 
 .h2 {
@@ -298,7 +283,7 @@ textarea::placeholder {
 .timeline {
   position: relative;
   padding-left: 36px;
-  border-left: 1px solid rgba(var(--accent-rgb), 0.25);
+  border-left: 1px solid rgba(92, 173, 255, 0.25);
   display: grid;
   gap: 44px;
 }

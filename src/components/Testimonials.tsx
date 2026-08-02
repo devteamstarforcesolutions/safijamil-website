@@ -10,7 +10,7 @@ export default function Testimonials() {
               fontFamily: "var(--font-space-grotesk), sans-serif",
               fontSize: 13,
               letterSpacing: 2.5,
-              color: "var(--accent)",
+              color: "#5CADFF",
               textTransform: "uppercase",
               marginBottom: 16,
             }}
@@ -35,8 +35,8 @@ export default function Testimonials() {
               key={q.text}
               style={{
                 padding: 32,
-                background: "var(--card)",
-                border: "1px solid rgba(var(--accent-rgb),.14)",
+                background: "#101826",
+                border: "1px solid rgba(92,173,255,.14)",
                 display: "flex",
                 flexDirection: "column",
                 gap: 20,
@@ -47,18 +47,18 @@ export default function Testimonials() {
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontSize: 40,
                   lineHeight: 0.5,
-                  color: "var(--accent)",
+                  color: "#5CADFF",
                   marginTop: 10,
                 }}
               >
                 &quot;
               </div>
-              <p style={{ fontSize: 15.5, lineHeight: 1.75, color: "var(--text-2)", margin: 0, flex: 1 }}>
+              <p style={{ fontSize: 15.5, lineHeight: 1.75, color: "#B7C2D4", margin: 0, flex: 1 }}>
                 {q.text}
               </p>
               <div>
-                <div style={{ fontSize: 15, fontWeight: 600, color: "var(--text)" }}>{q.name}</div>
-                <div style={{ fontSize: 13.5, color: "var(--muted)", marginTop: 2 }}>{q.role}</div>
+                <div style={{ fontSize: 15, fontWeight: 600, color: "#E8EDF5" }}>{q.name}</div>
+                <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 2 }}>{q.role}</div>
               </div>
             </div>
           ))}
