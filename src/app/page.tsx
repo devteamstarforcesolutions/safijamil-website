@@ -10,6 +10,9 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
+// Revalidate hourly so scheduled blog posts surface on the homepage as they publish.
+export const revalidate = 3600;
+
 export default function Home() {
   return (
     <>

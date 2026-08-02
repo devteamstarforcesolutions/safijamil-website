@@ -1,4 +1,20 @@
+"use client";
+
+import Link from "next/link";
+
+import { useState } from "react";
+
+const links = [
+  { href: "/#about", label: "About" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#work", label: "Case Work" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/blog", label: "Blog" },
+];
+
 export default function Nav() {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav
       className="nav-bar"
@@ -8,56 +24,83 @@ export default function Nav() {
         left: 0,
         right: 0,
         zIndex: 100,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        background: "rgba(11,15,23,.82)",
+        background: "var(--nav-bg)",
         backdropFilter: "blur(14px)",
-        borderBottom: "1px solid rgba(92,173,255,.12)",
+        borderBottom: "1px solid rgba(var(--accent-rgb),.12)",
       }}
     >
-      <a href="#top" style={{ display: "flex", alignItems: "center", gap: 12, color: "#E8EDF5" }}>
-        <span
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 40,
-            height: 40,
-            border: "1.5px solid #5CADFF",
-            color: "#5CADFF",
-            fontFamily: "var(--font-space-grotesk), sans-serif",
-            fontWeight: 700,
-            fontSize: 17,
-            letterSpacing: 0.5,
-            boxShadow: "0 0 18px rgba(92,173,255,.35), inset 0 0 12px rgba(92,173,255,.12)",
-          }}
-        >
-          SJ
-        </span>
-        <span style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontWeight: 600, fontSize: 17, letterSpacing: 0.3 }}>
-          Safi Jamil
-        </span>
-      </a>
-      <div style={{ display: "flex", alignItems: "center", gap: 28, fontSize: 14.5 }}>
-        <a href="#about" className="nav-link">About</a>
-        <a href="#experience" className="nav-link">Experience</a>
-        <a href="#work" className="nav-link">Case Work</a>
-        <a href="#skills" className="nav-link">Skills</a>
-        <a
-          href="#contact"
-          className="nav-cta"
-          style={{
-            display: "inline-block",
-            padding: "10px 22px",
-            background: "#5CADFF",
-            color: "#06090F",
-            fontWeight: 600,
-            boxShadow: "0 0 24px rgba(92,173,255,.4)",
-          }}
-        >
-          Let&apos;s talk
-        </a>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <Link href="/#top" style={{ display: "flex", alignItems: "center", gap: 12, color: "var(--text)" }}>
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 40,
+              height: 40,
+              border: "1.5px solid var(--accent)",
+              color: "var(--accent)",
+              fontFamily: "var(--font-space-grotesk), sans-serif",
+              fontWeight: 700,
+              fontSize: 17,
+              letterSpacing: 0.5,
+              boxShadow: "0 0 18px rgba(var(--accent-rgb),.35), inset 0 0 12px rgba(var(--accent-rgb),.12)",
+            }}
+          >
+            SJ
+          </span>
+          <span style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontWeight: 600, fontSize: 17, letterSpacing: 0.3 }}>
+            Safi Jamil
+          </span>
+        </Link>
+        <div style={{ display: "flex", alignItems: "center", gap: 28, fontSize: 14.5 }}>
+          {links.map((l) => (
+            <Link key={l.href} href={l.href} className="nav-link">
+              {l.label}
+            </Link>
+          ))}
+          <Link
+            href="/#contact"
+            className="nav-cta"
+            style={{
+              display: "inline-block",
+              padding: "10px 22px",
+              background: "var(--accent)",
+              color: "var(--on-accent)",
+              fontWeight: 600,
+              boxShadow: "0 0 24px rgba(var(--accent-rgb),.4)",
+            }}
+          >
+            Let&apos;s talk
+          </Link>
+          <button
+            type="button"
+            className="nav-burger"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+          >
+            <span className={open ? "burger-line burger-line--top-open" : "burger-line"} />
+            <span className={open ? "burger-line burger-line--mid-open" : "burger-line"} />
+            <span className={open ? "burger-line burger-line--bot-open" : "burger-line"} />
+          </button>
+        </div>
+      </div>
+      <div className={open ? "nav-mobile-menu nav-mobile-menu--open" : "nav-mobile-menu"}>
+        {links.map((l) => (
+          <Link key={l.href} href={l.href} className="nav-mobile-link" onClick={() => setOpen(false)}>
+            {l.label}
+          </Link>
+        ))}
+        <Link href="/#contact" className="nav-mobile-link" onClick={() => setOpen(false)} style={{ color: "var(--accent)" }}>
+          Contact →
+        </Link>
       </div>
     </nav>
   );

@@ -1,8 +1,10 @@
-import { posts } from "@/data/content";
+import Link from "next/link";
+import { publishedPosts } from "@/data/posts";
 
 export default function Insights() {
+  const latest = publishedPosts().slice(0, 3);
   return (
-    <section id="blog" className="section">
+    <section id="blog-preview" className="section">
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div data-reveal="" className="insights-head">
           <div>
@@ -11,7 +13,7 @@ export default function Insights() {
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: 13,
                 letterSpacing: 2.5,
-                color: "#5CADFF",
+                color: "var(--accent)",
                 textTransform: "uppercase",
                 marginBottom: 16,
               }}
@@ -26,41 +28,43 @@ export default function Insights() {
                 margin: 0,
               }}
             >
-              Writing, coming soon
+              From the blog
             </h2>
           </div>
-          <span
+          <Link
+            href="/blog"
             style={{
               fontSize: 13,
               letterSpacing: 1.5,
-              color: "#40E0D0",
               fontFamily: "var(--font-space-grotesk), sans-serif",
               textTransform: "uppercase",
               whiteSpace: "nowrap",
               paddingBottom: 8,
             }}
           >
-            In the works
-          </span>
+            View all posts →
+          </Link>
         </div>
         <div className="posts-grid">
-          {posts.map((p) => (
-            <div
+          {latest.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/blog/${p.slug}`}
               data-reveal=""
-              key={p.title}
               style={{
                 padding: 32,
-                border: "1px dashed rgba(92,173,255,.3)",
+                border: "1px dashed rgba(var(--accent-rgb),.3)",
                 display: "flex",
                 flexDirection: "column",
                 gap: 14,
+                color: "var(--text)",
               }}
             >
               <span
                 style={{
                   fontSize: 12.5,
                   letterSpacing: 1.5,
-                  color: "#8493A8",
+                  color: "var(--muted)",
                   textTransform: "uppercase",
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                 }}
@@ -78,7 +82,7 @@ export default function Insights() {
               >
                 {p.title}
               </h3>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
