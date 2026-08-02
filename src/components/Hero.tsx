@@ -92,9 +92,10 @@ export default function Hero() {
               textWrap: "pretty",
             }}
           >
-            I&apos;m Safi — a performance marketer and brand strategist. I help e-commerce and service
-            brands generate sales and leads through Google Ads and Meta campaigns, with full-funnel
-            ownership from tracking to testing.
+            I&apos;m Safi — a brand strategist and Google Ads specialist, in the PPC industry since
+            2018. I help US-based e-commerce and service brands generate sales and leads through
+            Google Ads and Meta campaigns — working remotely, with full-funnel ownership from
+            tracking to testing.
           </p>
           <div className="hero-ctas">
             <a
@@ -136,15 +137,19 @@ export default function Hero() {
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "#5CADFF" }}>
-                7+ yrs
+                Since 2018
               </div>
-              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>Performance marketing</div>
+              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>In the PPC industry</div>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "#5CADFF" }}>
-                6
+                Level 2
               </div>
-              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>Industries scaled</div>
+              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>
+                <a href="https://www.fiverr.com/safiullahjamil" target="_blank" rel="noopener noreferrer" style={{ color: "#8493A8", textDecoration: "underline", textUnderlineOffset: 3 }}>
+                  Fiverr seller
+                </a>
+              </div>
             </div>
           </div>
         </div>
