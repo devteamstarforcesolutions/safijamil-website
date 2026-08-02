@@ -10,7 +10,7 @@ export default function Experience() {
               fontFamily: "var(--font-space-grotesk), sans-serif",
               fontSize: 13,
               letterSpacing: 2.5,
-              color: "#5CADFF",
+              color: "var(--accent)",
               textTransform: "uppercase",
               marginBottom: 16,
             }}
@@ -25,7 +25,7 @@ export default function Experience() {
               margin: 0,
             }}
           >
-            Seven years in the growth trenches
+            In the growth trenches since 2018
           </h2>
         </div>
         <div className="timeline">
@@ -40,15 +40,15 @@ export default function Experience() {
                   width: 11,
                   height: 11,
                   borderRadius: "50%",
-                  background: "#0B0F17",
-                  border: "2px solid #5CADFF",
-                  boxShadow: "0 0 12px rgba(92,173,255,.6)",
+                  background: "var(--bg)",
+                  border: "2px solid var(--accent)",
+                  boxShadow: "0 0 12px rgba(var(--accent-rgb),.6)",
                 }}
               />
               <div
                 style={{
                   fontSize: 13,
-                  color: "#40E0D0",
+                  color: "var(--accent-2)",
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                   letterSpacing: 1,
                   marginBottom: 8,
@@ -66,8 +66,8 @@ export default function Experience() {
               >
                 {job.title}
               </h3>
-              <div style={{ fontSize: 15, color: "#8CC5FF", marginBottom: 12 }}>{job.company}</div>
-              <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "#B7C2D4", margin: 0, maxWidth: 680 }}>
+              <div style={{ fontSize: 15, color: "var(--accent-soft)", marginBottom: 12 }}>{job.company}</div>
+              <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "var(--text-2)", margin: 0, maxWidth: 680 }}>
                 {job.summary}
               </p>
             </div>

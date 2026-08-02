@@ -11,7 +11,7 @@ export default function Insights() {
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontSize: 13,
                 letterSpacing: 2.5,
-                color: "#5CADFF",
+                color: "var(--accent)",
                 textTransform: "uppercase",
                 marginBottom: 16,
               }}
@@ -33,7 +33,7 @@ export default function Insights() {
             style={{
               fontSize: 13,
               letterSpacing: 1.5,
-              color: "#40E0D0",
+              color: "var(--accent-2)",
               fontFamily: "var(--font-space-grotesk), sans-serif",
               textTransform: "uppercase",
               whiteSpace: "nowrap",
@@ -50,7 +50,7 @@ export default function Insights() {
               key={p.title}
               style={{
                 padding: 32,
-                border: "1px dashed rgba(92,173,255,.3)",
+                border: "1px dashed rgba(var(--accent-rgb),.3)",
                 display: "flex",
                 flexDirection: "column",
                 gap: 14,
@@ -60,7 +60,7 @@ export default function Insights() {
                 style={{
                   fontSize: 12.5,
                   letterSpacing: 1.5,
-                  color: "#8493A8",
+                  color: "var(--muted)",
                   textTransform: "uppercase",
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                 }}

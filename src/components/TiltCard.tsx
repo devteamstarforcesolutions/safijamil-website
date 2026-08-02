@@ -33,8 +33,8 @@ export default function TiltCard({
       onMouseLeave={onMouseLeave}
       style={{
         padding: 36,
-        background: "#101826",
-        border: "1px solid rgba(92,173,255,.14)",
+        background: "var(--card)",
+        border: "1px solid rgba(var(--accent-rgb),.14)",
       }}
     >
       {children}

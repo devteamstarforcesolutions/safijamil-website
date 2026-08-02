@@ -15,7 +15,7 @@ export default function Contact() {
           width: 600,
           height: 600,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(92,173,255,.16) 0%, rgba(92,173,255,0) 65%)",
+          background: "radial-gradient(circle, rgba(var(--accent-rgb),.16) 0%, rgba(var(--accent-rgb),0) 65%)",
           pointerEvents: "none",
         }}
       />
@@ -26,7 +26,7 @@ export default function Contact() {
               fontFamily: "var(--font-space-grotesk), sans-serif",
               fontSize: 13,
               letterSpacing: 2.5,
-              color: "#5CADFF",
+              color: "var(--accent)",
               textTransform: "uppercase",
               marginBottom: 16,
             }}
@@ -43,7 +43,7 @@ export default function Contact() {
           >
             Let&apos;s grow something together
           </h2>
-          <p style={{ fontSize: 16.5, lineHeight: 1.7, color: "#B7C2D4", margin: "0 0 40px" }}>
+          <p style={{ fontSize: 16.5, lineHeight: 1.7, color: "var(--text-2)", margin: "0 0 40px" }}>
             Tell me about your business and your goals — I&apos;ll reply within a day with an
             honest read on whether paid ads can move the needle for you.
           </p>
@@ -56,8 +56,8 @@ export default function Contact() {
                   justifyContent: "center",
                   width: 44,
                   height: 44,
-                  border: "1px solid rgba(92,173,255,.35)",
-                  color: "#5CADFF",
+                  border: "1px solid rgba(var(--accent-rgb),.35)",
+                  color: "var(--accent)",
                   fontSize: 17,
                 }}
               >
@@ -73,8 +73,8 @@ export default function Contact() {
                   justifyContent: "center",
                   width: 44,
                   height: 44,
-                  border: "1px solid rgba(92,173,255,.35)",
-                  color: "#5CADFF",
+                  border: "1px solid rgba(var(--accent-rgb),.35)",
+                  color: "var(--accent)",
                   fontSize: 17,
                 }}
               >
@@ -96,8 +96,8 @@ export default function Contact() {
                   justifyContent: "center",
                   width: 44,
                   height: 44,
-                  border: "1px solid rgba(92,173,255,.35)",
-                  color: "#5CADFF",
+                  border: "1px solid rgba(var(--accent-rgb),.35)",
+                  color: "var(--accent)",
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                   fontWeight: 700,
                   fontSize: 14,
@@ -106,6 +106,31 @@ export default function Contact() {
                 in
               </span>
               <span style={{ fontSize: 16 }}>linkedin.com/in/safiullahjamil</span>
+            </a>
+            <a
+              href="https://www.fiverr.com/safiullahjamil"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+              style={{ display: "flex", alignItems: "center", gap: 16 }}
+            >
+              <span
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 44,
+                  height: 44,
+                  border: "1px solid rgba(var(--accent-rgb),.35)",
+                  color: "var(--accent)",
+                  fontFamily: "var(--font-space-grotesk), sans-serif",
+                  fontWeight: 700,
+                  fontSize: 14,
+                }}
+              >
+                fi
+              </span>
+              <span style={{ fontSize: 16 }}>fiverr.com/safiullahjamil · Level 2 Seller</span>
             </a>
           </div>
         </div>

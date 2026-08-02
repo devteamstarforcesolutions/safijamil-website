@@ -4,7 +4,7 @@ const labelStyle: React.CSSProperties = {
   display: "grid",
   gap: 8,
   fontSize: 13.5,
-  color: "#8CC5FF",
+  color: "var(--accent-soft)",
   letterSpacing: 1,
   fontFamily: "var(--font-space-grotesk), sans-serif",
   textTransform: "uppercase",
@@ -12,9 +12,9 @@ const labelStyle: React.CSSProperties = {
 
 const fieldStyle: React.CSSProperties = {
   padding: "14px 16px",
-  background: "#0B0F17",
-  border: "1px solid rgba(92,173,255,.2)",
-  color: "#E8EDF5",
+  background: "var(--bg)",
+  border: "1px solid rgba(var(--accent-rgb),.2)",
+  color: "var(--text)",
   fontSize: 15,
   fontFamily: "var(--font-ibm-plex-sans), sans-serif",
 };
@@ -39,8 +39,8 @@ export default function ContactForm() {
       onSubmit={sendMail}
       style={{
         padding: 40,
-        background: "#101826",
-        border: "1px solid rgba(92,173,255,.14)",
+        background: "var(--card)",
+        border: "1px solid rgba(var(--accent-rgb),.14)",
         display: "grid",
         gap: 18,
       }}
@@ -82,14 +82,14 @@ export default function ContactForm() {
         className="btn-primary"
         style={{
           padding: 15,
-          background: "#5CADFF",
-          color: "#06090F",
+          background: "var(--accent)",
+          color: "var(--on-accent)",
           fontWeight: 600,
           fontSize: 16,
           border: "none",
           cursor: "pointer",
           fontFamily: "var(--font-ibm-plex-sans), sans-serif",
-          boxShadow: "0 0 28px rgba(92,173,255,.35)",
+          boxShadow: "0 0 28px rgba(var(--accent-rgb),.35)",
         }}
       >
         Send message →
