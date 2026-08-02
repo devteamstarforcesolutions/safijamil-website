@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { cases } from "@/data/content";
 import TiltCard from "./TiltCard";
 
@@ -33,6 +34,19 @@ export default function CaseWork() {
             businesses, managed remotely, every one with full conversion tracking so every dollar
             is accountable.
           </p>
+          <Link
+            href="/case-studies"
+            style={{
+              display: "inline-block",
+              marginTop: 18,
+              fontSize: 14,
+              letterSpacing: 1.5,
+              fontFamily: "var(--font-space-grotesk), sans-serif",
+              textTransform: "uppercase",
+            }}
+          >
+            View detailed case studies with screenshots →
+          </Link>
         </div>
         <div className="cases-grid">
           {cases.map((c) => (

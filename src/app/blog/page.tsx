@@ -52,6 +52,14 @@ export default function BlogIndex() {
                   color: "var(--text)",
                 }}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/images/blog/${p.slug}.svg`}
+                  alt=""
+                  width={1200}
+                  height={480}
+                  style={{ width: "100%", height: "auto", display: "block", marginBottom: 20, border: "1px solid rgba(var(--accent-rgb),.14)" }}
+                />
                 <div style={{ display: "flex", justifyContent: "space-between", gap: 16, marginBottom: 10, flexWrap: "wrap" }}>
                   <span
                     style={{

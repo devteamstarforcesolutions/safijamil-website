@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0B0F17"/>
+<stop offset="1" stop-color="#101B2E"/>
+</linearGradient>
+<radialGradient id="glow" cx="0.85" cy="0.2" r="0.7">
+<stop offset="0" stop-color="#40E0D0" stop-opacity="0.18"/>
+<stop offset="1" stop-color="#40E0D0" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="1200" height="480" fill="url(#bg)"/>
+<rect width="1200" height="480" fill="url(#glow)"/>
+<line x1="0" y1="80" x2="1200" y2="80" stroke="#40E0D0" stroke-opacity="0.06" stroke-width="1"/><line x1="0" y1="160" x2="1200" y2="160" stroke="#40E0D0" stroke-opacity="0.06" stroke-width="1"/><line x1="0" y1="240" x2="1200" y2="240" stroke="#40E0D0" stroke-opacity="0.06" stroke-width="1"/><line x1="0" y1="320" x2="1200" y2="320" stroke="#40E0D0" stroke-opacity="0.06" stroke-width="1"/><line x1="0" y1="400" x2="1200" y2="400" stroke="#40E0D0" stroke-opacity="0.06" stroke-width="1"/><line x1="120" y1="0" x2="120" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/><line x1="240" y1="0" x2="240" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/><line x1="360" y1="0" x2="360" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/><line x1="480" y1="0" x2="480" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/><line x1="600" y1="0" x2="600" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/><line x1="720" y1="0" x2="720" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/><line x1="840" y1="0" x2="840" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/><line x1="960" y1="0" x2="960" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/><line x1="1080" y1="0" x2="1080" y2="480" stroke="#40E0D0" stroke-opacity="0.05" stroke-width="1"/>
+<circle cx="1010" cy="120" r="150" fill="none" stroke="#40E0D0" stroke-opacity="0.25"/>
+<circle cx="1010" cy="120" r="190" fill="none" stroke="#40E0D0" stroke-opacity="0.12" stroke-dasharray="4 7"/>
+<circle cx="1010" cy="-30" r="6" fill="#40E0D0"/>
+<polyline points="80,355 190,320 300,306 410,253 520,274 630,250 740,212 850,149 960,152" fill="none" stroke="#40E0D0" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="80" cy="355" r="5" fill="#40E0D0"/><circle cx="300" cy="306" r="5" fill="#40E0D0"/><circle cx="520" cy="274" r="5" fill="#40E0D0"/><circle cx="740" cy="212" r="5" fill="#40E0D0"/><circle cx="960" cy="152" r="5" fill="#40E0D0"/>
+<rect x="64" y="56" width="40" height="40" fill="none" stroke="#40E0D0" stroke-width="2"/>
+<text x="84" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#40E0D0">SJ</text>
+<text x="122" y="82" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#8493A8">SAFIJAMIL.COM</text>
+<text x="66" y="420" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="8" fill="#40E0D0">TRACKING</text>
+<text x="1130" y="428" text-anchor="end" font-family="Arial, sans-serif" font-size="88" font-weight="700" fill="#40E0D0" fill-opacity="0.14">02</text>
+</svg>

@@ -6,6 +6,7 @@ import CaseWork from "@/components/CaseWork";
 import Skills from "@/components/Skills";
 import Testimonials from "@/components/Testimonials";
 import Insights from "@/components/Insights";
+import HomeFaq from "@/components/HomeFaq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -24,6 +25,7 @@ export default function Home() {
       <CaseWork />
       <Skills />
       <Testimonials />
+      <HomeFaq />
       <Insights />
       <Contact />
       <Footer />
