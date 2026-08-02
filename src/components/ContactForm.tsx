@@ -25,6 +25,12 @@ const fieldStyle: React.CSSProperties = {
 /** Public by design — Web3Forms keys are meant to be visible in client code. */
 const PUBLIC_WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}
+
 type Status = "idle" | "sending" | "sent" | "error";
 
 export default function ContactForm() {
@@ -83,6 +89,8 @@ export default function ContactForm() {
       if (res.ok && (body.ok || body.success)) {
         setStatus("sent");
         form.reset();
+        // Fires a GTM trigger so the lead can be counted as a conversion.
+        window.dataLayer?.push({ event: "contact_form_submit" });
       } else {
         setStatus("error");
         setError(

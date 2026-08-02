@@ -27,6 +27,7 @@ assistant without push access, deliver changes as a zip of the `src/` (and
 | Domain | safijamil.com | DNS managed at **Cloudflare** |
 | Contact form | Web3Forms (free tier) | delivers to safijamil.dev@gmail.com |
 | Search | Google Search Console | domain property verified |
+| Analytics | GTM `GTM-N8RCXCCG`, GA4 `G-BEZK2MSB9E`, Clarity `xw96qvpavg` | all installed in `src/app/layout.tsx` |
 
 ### Cloudflare DNS gotcha
 
@@ -114,6 +115,35 @@ as a fallback and as the Resend path.
 Debugging: append `?debug=1` to any page URL and submit the form — the exact
 upstream error appears under the error message. Visiting `/api/contact` shows
 whether a provider key is configured.
+
+---
+
+## Analytics
+
+Three tags are installed in `src/app/layout.tsx` via `next/script`
+(`strategy="afterInteractive"`). Their IDs are constants at the top of that file:
+
+| Tag | ID |
+|---|---|
+| Google Tag Manager | `GTM_ID` = `GTM-N8RCXCCG` (plus the `<noscript>` iframe first inside `<body>`) |
+| GA4 (gtag.js) | `GA4_ID` = `G-BEZK2MSB9E` |
+| Microsoft Clarity | `CLARITY_ID` = `xw96qvpavg` |
+
+Raw `<script>` tags pasted into `<head>` do not work reliably in the App Router —
+always use `next/script`.
+
+> **Double-counting warning:** GA4 is loaded *directly* via gtag.js. Do **not** also
+> create a GA4 Configuration tag for `G-BEZK2MSB9E` inside GTM — pageviews would be
+> counted twice. Use GTM for everything else (Ads conversions, custom events).
+
+**Custom events pushed to `dataLayer`:**
+
+| Event | Fires when | Use |
+|---|---|---|
+| `contact_form_submit` | contact form submits successfully | build a GTM trigger → GA4 event / Google Ads conversion |
+
+To add more (e.g. WhatsApp clicks), push from the relevant component:
+`window.dataLayer?.push({ event: "whatsapp_click" })`.
 
 ---
 
