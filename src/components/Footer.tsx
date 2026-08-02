@@ -28,6 +28,9 @@ export default function Footer() {
         <a href="https://linkedin.com/in/safiullahjamil" target="_blank" rel="noopener noreferrer" className="footer-link">
           LinkedIn
         </a>
+        <a href="https://www.fiverr.com/safiullahjamil" target="_blank" rel="noopener noreferrer" className="footer-link">
+          Fiverr
+        </a>
       </div>
     </footer>
   );
