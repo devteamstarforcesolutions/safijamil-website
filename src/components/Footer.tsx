@@ -25,6 +25,7 @@ export default function Footer() {
           <span style={{ fontSize: 14, color: "var(--muted)" }}>© 2026 Safi Jamil · safijamil.com</span>
         </div>
         <div style={{ display: "flex", gap: 24, fontSize: 14, flexWrap: "wrap", justifyContent: "center" }}>
+          <Link href="/case-studies" className="footer-link">Case Studies</Link>
           <Link href="/blog" className="footer-link">Blog</Link>
           <a href="mailto:safijamil.dev@gmail.com" className="footer-link">Email</a>
           <a href="https://linkedin.com/in/safiullahjamil" target="_blank" rel="noopener noreferrer" className="footer-link">

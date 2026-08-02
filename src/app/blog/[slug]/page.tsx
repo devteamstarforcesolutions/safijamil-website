@@ -89,6 +89,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           >
             {post.title}
           </h1>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`/images/blog/${post.slug}.svg`}
+            alt=""
+            width={1200}
+            height={480}
+            style={{ width: "100%", height: "auto", display: "block", margin: "0 0 32px", border: "1px solid rgba(var(--accent-rgb),.14)" }}
+          />
           <PostBody content={post.content} />
           <div
             style={{

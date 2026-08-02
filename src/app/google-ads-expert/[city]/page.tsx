@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { cities, getCity, sharedFaq } from "@/data/cities";
+import FaqList from "@/components/FaqList";
 
 export function generateStaticParams() {
   return cities.map((c) => ({ city: c.slug }));
@@ -154,14 +155,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         <section className="section">
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <div style={labelStyle}>Frequently asked questions</div>
-            <div style={{ display: "grid", gap: 16 }}>
-              {faqs.map((f) => (
-                <div key={f.q} style={{ padding: "24px 28px", background: "var(--card)", border: "1px solid rgba(var(--accent-rgb),.14)" }}>
-                  <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontWeight: 600, fontSize: 16.5, marginBottom: 8 }}>{f.q}</div>
-                  <p style={{ fontSize: 15, lineHeight: 1.7, color: "var(--text-2)", margin: 0 }}>{f.a}</p>
-                </div>
-              ))}
-            </div>
+            <FaqList faqs={faqs} />
             <div style={{ marginTop: 40 }}>
               <div style={{ fontSize: 14.5, color: "var(--muted)", marginBottom: 12 }}>Other cities I serve:</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 18px", fontSize: 14.5 }}>

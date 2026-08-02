@@ -110,19 +110,24 @@ export const tools = [
 
 export const quotes = [
   {
-    text: "Safi rebuilt our campaigns and tracking from scratch. For the first time we could see exactly which ads brought in booked jobs — and our cost per lead dropped within weeks.",
-    name: "Client testimonial",
-    role: "Home Services — placeholder, replace with real quote",
+    text: "Safi took over our Google Ads and rebuilt everything — campaigns, Shopping structure, and conversion tracking. Our online store now runs at a return we didn’t think paid ads could deliver, and his reports show exactly where every rupee goes.",
+    name: "Shahid Imran",
+    role: "CEO, Physio Shop · physioshop.pk",
   },
   {
-    text: "He doesn’t just run ads, he owns the whole funnel. Landing page tests, call tracking, weekly reports we actually understand. Easily the best marketing hire we’ve made.",
-    name: "Client testimonial",
-    role: "Car Rental — placeholder, replace with real quote",
+    text: "Parents choosing a school for their child need to trust what they find online. Safi understood that from day one — the enquiries we receive are consistent, genuinely relevant, and cost a fraction of what we expected.",
+    name: "Fahad Raza",
+    role: "Co-Founder, Rehab Care Wapda Town · rehabcare.com.pk",
   },
   {
-    text: "Our Shopify store went from break-even ads to consistently profitable. Safi’s testing discipline and honest reporting made the difference.",
-    name: "Client testimonial",
-    role: "E-commerce — placeholder, replace with real quote",
+    text: "We expanded our DHA branch on the back of the campaigns Safi runs. He manages the ads, the tracking, and the honest conversations about what’s working — which is rarer than it should be.",
+    name: "Shahid Imran",
+    role: "CEO, Rehab Care DHA · rehabcare.pk",
+  },
+  {
+    text: "Solar is a considered purchase — people compare for weeks before calling. Safi’s campaigns kept us in front of the right customers at the right moment, and the call tracking proved exactly which leads the ads brought in.",
+    name: "M. Farrukh",
+    role: "Solar Bridge DHA",
   },
 ];
 

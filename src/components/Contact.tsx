@@ -31,7 +31,7 @@ export default function Contact() {
               marginBottom: 16,
             }}
           >
-            07 — Contact
+            08 — Contact
           </div>
           <h2
             className="h2--xl"

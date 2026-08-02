@@ -7,7 +7,7 @@ import { useState } from "react";
 const links = [
   { href: "/#about", label: "About" },
   { href: "/#experience", label: "Experience" },
-  { href: "/#work", label: "Case Work" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/#skills", label: "Skills" },
   { href: "/blog", label: "Blog" },
 ];
@@ -36,7 +36,7 @@ export default function Nav() {
           justifyContent: "space-between",
         }}
       >
-        <Link href="/#top" style={{ display: "flex", alignItems: "center", gap: 12, color: "var(--text)" }}>
+        <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12, color: "var(--text)" }}>
           <span
             style={{
               display: "flex",
