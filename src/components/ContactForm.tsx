@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { WHATSAPP_URL } from "@/data/contact";
 
 const labelStyle: React.CSSProperties = {
   display: "grid",
@@ -90,7 +91,11 @@ export default function ContactForm() {
         </div>
         <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "var(--text-2)", margin: 0 }}>
           Thanks for reaching out — I&apos;ve got your details and will reply within a day, usually
-          sooner. If it&apos;s urgent, call or WhatsApp me on +92 344 3047362.
+          sooner. If it&apos;s urgent,{" "}
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            message me on WhatsApp
+          </a>
+          .
         </p>
         <button
           type="button"

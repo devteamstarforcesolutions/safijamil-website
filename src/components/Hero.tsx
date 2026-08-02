@@ -143,13 +143,9 @@ export default function Hero() {
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 34, fontWeight: 700, color: "#5CADFF" }}>
-                Level 2
+                6
               </div>
-              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>
-                <a href="https://www.fiverr.com/safiullahjamil" target="_blank" rel="noopener noreferrer" style={{ color: "#8493A8", textDecoration: "underline", textUnderlineOffset: 3 }}>
-                  Fiverr seller
-                </a>
-              </div>
+              <div style={{ fontSize: 13.5, color: "#8493A8", marginTop: 4 }}>Industries scaled</div>
             </div>
           </div>
         </div>
@@ -164,11 +160,13 @@ export default function Hero() {
               pointerEvents: "none",
             }}
           >
+            {/* Sits on the ring: point at angle t is (50 + 50cos t, 50 + 50sin t). Here t = -90°. */}
             <span
               style={{
                 position: "absolute",
-                top: -5,
                 left: "50%",
+                top: "0%",
+                transform: "translate(-50%, -50%)",
                 width: 9,
                 height: 9,
                 borderRadius: "50%",
@@ -187,11 +185,13 @@ export default function Hero() {
               pointerEvents: "none",
             }}
           >
+            {/* Same parametric placement, t = 130° (lower left). */}
             <span
               style={{
                 position: "absolute",
-                bottom: 0,
-                left: "18%",
+                left: "17.86%",
+                top: "88.3%",
+                transform: "translate(-50%, -50%)",
                 width: 7,
                 height: 7,
                 borderRadius: "50%",
