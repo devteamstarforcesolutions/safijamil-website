@@ -17,9 +17,9 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Safi Jamil — Brand Strategist & Google Ads Specialist",
+  title: "Safi Jamil — Performance Marketing & Brand Strategist",
   description:
-    "Safi Jamil is a brand strategist and Google Ads specialist in the PPC industry since 2018, helping US-based e-commerce and service brands generate sales and leads through Google Ads and Meta campaigns.",
+    "Safi Jamil is a performance marketer and brand strategist helping e-commerce and service brands generate sales and leads through Google Ads and Meta campaigns.",
 };
 
 export default function RootLayout({

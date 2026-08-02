@@ -107,31 +107,6 @@ export default function Contact() {
               </span>
               <span style={{ fontSize: 16 }}>linkedin.com/in/safiullahjamil</span>
             </a>
-            <a
-              href="https://www.fiverr.com/safiullahjamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-link"
-              style={{ display: "flex", alignItems: "center", gap: 16 }}
-            >
-              <span
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 44,
-                  height: 44,
-                  border: "1px solid rgba(92,173,255,.35)",
-                  color: "#5CADFF",
-                  fontFamily: "var(--font-space-grotesk), sans-serif",
-                  fontWeight: 700,
-                  fontSize: 14,
-                }}
-              >
-                fi
-              </span>
-              <span style={{ fontSize: 16 }}>fiverr.com/safiullahjamil · Level 2 Seller</span>
-            </a>
           </div>
         </div>
         <ContactForm />

@@ -29,9 +29,8 @@ export default function CaseWork() {
             Campaigns that pay for themselves
           </h2>
           <p style={{ fontSize: 16.5, lineHeight: 1.7, color: "#B7C2D4", margin: 0 }}>
-            A snapshot of the industries I run paid growth for — hefty ad accounts for US-based
-            businesses, managed remotely, every one with full conversion tracking so every dollar
-            is accountable.
+            A snapshot of the industries I run paid growth for — every account with full
+            conversion tracking, so every dollar is accountable.
           </p>
         </div>
         <div className="cases-grid">

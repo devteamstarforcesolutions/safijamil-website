@@ -25,7 +25,7 @@ export default function Experience() {
               margin: 0,
             }}
           >
-            In the growth trenches since 2018
+            Seven years in the growth trenches
           </h2>
         </div>
         <div className="timeline">
