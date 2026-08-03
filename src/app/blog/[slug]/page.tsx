@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       title: post.title,
       description: post.description,
-      url: `https://www.safijamil.com/blog/${post.slug}`,
+      url: `https://safijamil.com/blog/${post.slug}`,
       publishedTime: post.date,
       authors: ["Safi Jamil"],
     },
@@ -48,9 +48,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     author: {
       "@type": "Person",
       name: "Safi Jamil",
-      url: "https://www.safijamil.com",
+      url: "https://safijamil.com",
     },
-    mainEntityOfPage: `https://www.safijamil.com/blog/${post.slug}`,
+    mainEntityOfPage: `https://safijamil.com/blog/${post.slug}`,
   };
 
   return (

@@ -52,8 +52,8 @@ async function sendViaWeb3Forms(key: string, name: string, email: string, messag
       // Web3Forms is behind Cloudflare; a request with no browser-ish headers
       // is treated as a bot and rejected with 403.
       "User-Agent": "Mozilla/5.0 (compatible; safijamil.com contact form)",
-      Origin: "https://www.safijamil.com",
-      Referer: "https://www.safijamil.com/",
+      Origin: "https://safijamil.com",
+      Referer: "https://safijamil.com/",
     },
     body: JSON.stringify({
       access_key: key,

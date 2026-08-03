@@ -4,7 +4,7 @@ import { cities } from "@/data/cities";
 
 export const revalidate = 3600;
 
-const base = "https://www.safijamil.com";
+const base = "https://safijamil.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

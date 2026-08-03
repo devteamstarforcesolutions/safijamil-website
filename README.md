@@ -24,7 +24,7 @@ assistant without push access, deliver changes as a zip of the `src/` (and
 |---|---|---|
 | Code | GitHub `devteamstarforcesolutions/safijamil-website` | private |
 | Hosting | Vercel (Hobby / free) | auto-deploys on push to `main` |
-| Domain | **www.safijamil.com** is primary; the apex 308-redirects to it. All canonicals, the sitemap and structured data must use the `www` form. | DNS at **Cloudflare** |
+| Domain | **safijamil.com** (no www) is primary; `www` 308-redirects to it. Canonicals, the sitemap and structured data all use the bare form — keep them matching whichever domain is set primary in Vercel. | DNS at **Cloudflare** |
 | Contact form | Web3Forms (free tier) | delivers to safijamil.dev@gmail.com |
 | Search | Google Search Console | domain property verified |
 | Analytics | GTM `GTM-N8RCXCCG` only | GA4, Google Ads and Clarity are fired as tags **inside GTM**, not from the page |
@@ -173,6 +173,9 @@ owner offers full walkthroughs privately over Zoom instead.
 
 ## Open items
 
+- **Vercel Deployment Protection must stay OFF.** "Require Log In" was enabled at
+  one point, which returned 403 to everyone including Googlebot and left the site
+  unindexable. Check it first if pages stop being crawled.
 - **Testimonials** in `src/data/content.ts` are written on behalf of real, named
   clients (Physio Shop, Rehab Care ×2, Solar Bridge) based on real results. Confirm
   each client approves the wording, or replace with their own words.
