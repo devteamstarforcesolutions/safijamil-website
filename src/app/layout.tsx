@@ -25,7 +25,7 @@ const ibmPlexSans = IBM_Plex_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://safijamil.com";
+const siteUrl = "https://www.safijamil.com";
 const title = "Safi Jamil — Brand Strategist & Google Ads Specialist";
 const description =
   "Brand strategist and Google Ads specialist in the PPC industry since 2018. Safi Jamil helps US-based e-commerce and service brands generate sales and leads through Google Ads and Meta campaigns, with full-funnel conversion tracking.";

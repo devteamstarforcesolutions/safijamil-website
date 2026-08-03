@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
       "google ads specialist pakistan",
     ],
     alternates: { canonical: `/google-ads-expert/${c.slug}` },
-    openGraph: { title, description, url: `https://safijamil.com/google-ads-expert/${c.slug}` },
+    openGraph: { title, description, url: `https://www.safijamil.com/google-ads-expert/${c.slug}` },
   };
 }
 
@@ -65,10 +65,10 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     provider: {
       "@type": "Person",
       name: "Safi Jamil",
-      url: "https://safijamil.com",
+      url: "https://www.safijamil.com",
       jobTitle: "Brand Strategist & Google Ads Specialist",
     },
-    url: `https://safijamil.com/google-ads-expert/${c.slug}`,
+    url: `https://www.safijamil.com/google-ads-expert/${c.slug}`,
   };
   const faqJsonLd = {
     "@context": "https://schema.org",
