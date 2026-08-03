@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cities } from "@/data/cities";
+import TrackedLink from "./TrackedLink";
 
 export default function Footer() {
   return (
@@ -27,10 +28,10 @@ export default function Footer() {
         <div style={{ display: "flex", gap: 24, fontSize: 14, flexWrap: "wrap", justifyContent: "center" }}>
           <Link href="/case-studies" className="footer-link">Case Studies</Link>
           <Link href="/blog" className="footer-link">Blog</Link>
-          <a href="mailto:safijamil.dev@gmail.com" className="footer-link">Email</a>
-          <a href="https://linkedin.com/in/safiullahjamil" target="_blank" rel="noopener noreferrer" className="footer-link">
+          <TrackedLink href="mailto:safijamil.dev@gmail.com" event="email_click" label="footer_email" location="footer" className="footer-link">Email</TrackedLink>
+          <TrackedLink href="https://linkedin.com/in/safiullahjamil" event="linkedin_click" label="footer_linkedin" location="footer" target="_blank" rel="noopener noreferrer" className="footer-link">
             LinkedIn
-          </a>
+          </TrackedLink>
         </div>
       </div>
       <div className="footer-bar" style={{ paddingTop: 14, borderTop: "none" }}>

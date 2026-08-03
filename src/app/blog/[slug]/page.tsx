@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PostBody from "@/components/PostBody";
+import TrackedLink from "@/components/TrackedLink";
 import { getPost, publishedPosts } from "@/data/posts";
 
 export const revalidate = 3600;
@@ -113,8 +114,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               I&apos;m Safi — a brand strategist and Google Ads specialist managing $261K+ in active ad
               spend. Tell me about your goals and I&apos;ll give you an honest read.
             </p>
-            <Link
+            <TrackedLink
               href="/#contact"
+              event="cta_click"
+              label="blog_post_get_in_touch"
+              location={`blog_${post.slug}`}
               className="btn-primary"
               style={{
                 display: "inline-block",
@@ -126,7 +130,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               }}
             >
               Get in touch
-            </Link>
+            </TrackedLink>
           </div>
         </article>
       </main>

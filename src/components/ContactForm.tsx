@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { WHATSAPP_URL } from "@/data/contact";
+import { track } from "@/lib/analytics";
 
 const labelStyle: React.CSSProperties = {
   display: "grid",
@@ -37,6 +38,7 @@ export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [detail, setDetail] = useState("");
+  const startedRef = useRef(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -90,13 +92,14 @@ export default function ContactForm() {
         setStatus("sent");
         form.reset();
         // Fires a GTM trigger so the lead can be counted as a conversion.
-        window.dataLayer?.push({ event: "contact_form_submit" });
+        track("contact_form_submit", { form_name: "contact" });
       } else {
         setStatus("error");
         setError(
           body.error || "Your message couldn't be sent. Please try again."
         );
         setDetail(body.detail || body.message || `HTTP ${res.status}`);
+        track("contact_form_error", { form_name: "contact", error_status: res.status });
       }
     } catch (err) {
       setStatus("error");
@@ -104,6 +107,16 @@ export default function ContactForm() {
         "Couldn't reach the server — check your connection, or email safijamil.dev@gmail.com directly."
       );
       setDetail(err instanceof Error ? err.message : String(err));
+      track("contact_form_error", { form_name: "contact", error_status: "network" });
+    }
+  }
+
+  // Fires once, when the visitor starts filling the form — lets you measure
+  // how many people begin vs. finish.
+  function handleFirstInput() {
+    if (!startedRef.current) {
+      startedRef.current = true;
+      track("contact_form_start", { form_name: "contact" });
     }
   }
 
@@ -134,7 +147,14 @@ export default function ContactForm() {
         <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "var(--text-2)", margin: 0 }}>
           Thanks for reaching out — I&apos;ve got your details and will reply within a day, usually
           sooner. If it&apos;s urgent,{" "}
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() =>
+              track("whatsapp_click", { link_label: "form_success_whatsapp", link_location: "contact_form" })
+            }
+          >
             message me on WhatsApp
           </a>
           .
@@ -167,6 +187,7 @@ export default function ContactForm() {
       data-reveal=""
       className="contact-form-card"
       onSubmit={handleSubmit}
+      onFocus={handleFirstInput}
       noValidate
       style={{
         padding: 40,

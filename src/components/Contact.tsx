@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import TrackedLink from "./TrackedLink";
 import { WHATSAPP_URL } from "@/data/contact";
 
 function WhatsAppIcon() {
@@ -57,7 +58,7 @@ export default function Contact() {
             honest read on whether paid ads can move the needle for you.
           </p>
           <div style={{ display: "grid", gap: 20 }}>
-            <a href="mailto:safijamil.dev@gmail.com" className="contact-link" style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <TrackedLink href="mailto:safijamil.dev@gmail.com" event="email_click" label="contact_email" location="contact_section" className="contact-link" style={{ display: "flex", alignItems: "center", gap: 16 }}>
               <span
                 style={{
                   display: "flex",
@@ -73,9 +74,12 @@ export default function Contact() {
                 ✉
               </span>
               <span style={{ fontSize: 16 }}>safijamil.dev@gmail.com</span>
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
               href={WHATSAPP_URL}
+              event="whatsapp_click"
+              label="contact_whatsapp"
+              location="contact_section"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
@@ -97,9 +101,12 @@ export default function Contact() {
               <span style={{ fontSize: 16 }}>
                 +92 344 3047362 <span style={{ color: "#8493A8" }}>· Chat on WhatsApp</span>
               </span>
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
               href="https://linkedin.com/in/safiullahjamil"
+              event="linkedin_click"
+              label="contact_linkedin"
+              location="contact_section"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
@@ -122,7 +129,7 @@ export default function Contact() {
                 in
               </span>
               <span style={{ fontSize: 16 }}>linkedin.com/in/safiullahjamil</span>
-            </a>
+            </TrackedLink>
           </div>
         </div>
         <ContactForm />

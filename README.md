@@ -27,7 +27,7 @@ assistant without push access, deliver changes as a zip of the `src/` (and
 | Domain | safijamil.com | DNS managed at **Cloudflare** |
 | Contact form | Web3Forms (free tier) | delivers to safijamil.dev@gmail.com |
 | Search | Google Search Console | domain property verified |
-| Analytics | GTM `GTM-N8RCXCCG`, GA4 `G-BEZK2MSB9E`, Clarity `xw96qvpavg` | all installed in `src/app/layout.tsx` |
+| Analytics | GTM `GTM-N8RCXCCG` only | GA4, Google Ads and Clarity are fired as tags **inside GTM**, not from the page |
 
 ### Cloudflare DNS gotcha
 
@@ -120,30 +120,42 @@ whether a provider key is configured.
 
 ## Analytics
 
-Three tags are installed in `src/app/layout.tsx` via `next/script`
-(`strategy="afterInteractive"`). Their IDs are constants at the top of that file:
+**Only the GTM container loads from the page** (`src/app/layout.tsx`, via
+`next/script` plus the `<noscript>` iframe inside `<body>`). Everything else —
+GA4 `G-BEZK2MSB9E`, Google Ads `AW-11476762889`, Microsoft Clarity `xw96qvpavg` —
+is fired as a tag inside GTM.
 
-| Tag | ID |
-|---|---|
-| Google Tag Manager | `GTM_ID` = `GTM-N8RCXCCG` (plus the `<noscript>` iframe first inside `<body>`) |
-| GA4 (gtag.js) | `GA4_ID` = `G-BEZK2MSB9E` |
-| Microsoft Clarity | `CLARITY_ID` = `xw96qvpavg` |
+> **Do not re-add gtag.js or the Clarity snippet to the page.** They were briefly
+> installed both in code and in GTM, which double-counted pageviews and duplicated
+> Clarity recordings. One tag, one place: GTM.
 
 Raw `<script>` tags pasted into `<head>` do not work reliably in the App Router —
 always use `next/script`.
 
-> **Double-counting warning:** GA4 is loaded *directly* via gtag.js. Do **not** also
-> create a GA4 Configuration tag for `G-BEZK2MSB9E` inside GTM — pageviews would be
-> counted twice. Use GTM for everything else (Ads conversions, custom events).
+**Custom events pushed to `dataLayer`** (see `GTM-SETUP-GUIDE.md` for the full
+tag/trigger configuration):
 
-**Custom events pushed to `dataLayer`:**
+| Event | Fires when |
+|---|---|
+| `contact_form_start` | visitor focuses a form field (once per page) |
+| `contact_form_submit` | form submitted successfully — the main conversion |
+| `contact_form_error` | submission failed (carries `error_status`) |
+| `whatsapp_click` | any WhatsApp link |
+| `email_click` | any mailto link |
+| `linkedin_click` | LinkedIn profile link |
+| `cta_click` | any call-to-action button |
 
-| Event | Fires when | Use |
-|---|---|---|
-| `contact_form_submit` | contact form submits successfully | build a GTM trigger → GA4 event / Google Ads conversion |
+Click events carry `link_label`, `link_location` and `link_url`.
 
-To add more (e.g. WhatsApp clicks), push from the relevant component:
-`window.dataLayer?.push({ event: "whatsapp_click" })`.
+Events are pushed through `src/lib/analytics.ts`:
+
+```ts
+import { track } from "@/lib/analytics";
+track("cta_click", { link_label: "hero_see_my_work", link_location: "hero" });
+```
+
+For links, wrap them in `src/components/TrackedLink.tsx` instead — it handles
+internal/external routing and fires the event on click.
 
 ---
 

@@ -3,9 +3,13 @@ import Script from "next/script";
 import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
+/**
+ * Only the GTM container loads from the page. GA4 (G-BEZK2MSB9E), Google Ads
+ * (AW-11476762889) and Microsoft Clarity (xw96qvpavg) are all fired as tags
+ * inside GTM — loading them here as well would double-count pageviews and
+ * duplicate Clarity recordings.
+ */
 const GTM_ID = "GTM-N8RCXCCG";
-const GA4_ID = "G-BEZK2MSB9E";
-const CLARITY_ID = "xw96qvpavg";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -133,29 +137,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`}
         </Script>
 
-        {/* Google tag (gtag.js) — GA4. Note: do NOT also add a GA4
-            Configuration tag for this same ID inside GTM, or pageviews
-            get counted twice. */}
-        <Script
-          id="ga4-src"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA4_ID}');`}
-        </Script>
-
-        {/* Microsoft Clarity — session recordings and heatmaps. */}
-        <Script id="clarity-init" strategy="afterInteractive">
-          {`(function(c,l,a,r,i,t,y){
-c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "${CLARITY_ID}");`}
-        </Script>
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}

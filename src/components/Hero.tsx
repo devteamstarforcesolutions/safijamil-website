@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroTilt from "./HeroTilt";
+import TrackedLink from "./TrackedLink";
 import safiPhoto from "../../public/images/safi-jamil.jpeg";
 
 export default function Hero() {
@@ -98,8 +99,11 @@ export default function Hero() {
             tracking to testing.
           </p>
           <div className="hero-ctas">
-            <a
-              href="#work"
+            <TrackedLink
+              href="/#work"
+              event="cta_click"
+              label="hero_see_my_work"
+              location="hero"
               className="btn-primary"
               style={{
                 display: "inline-block",
@@ -112,9 +116,12 @@ export default function Hero() {
               }}
             >
               See my work
-            </a>
-            <a
-              href="#contact"
+            </TrackedLink>
+            <TrackedLink
+              href="/#contact"
+              event="cta_click"
+              label="hero_get_in_touch"
+              location="hero"
               className="btn-outline"
               style={{
                 display: "inline-block",
@@ -126,7 +133,7 @@ export default function Hero() {
               }}
             >
               Get in touch
-            </a>
+            </TrackedLink>
           </div>
           <div className="hero-stats">
             <div>

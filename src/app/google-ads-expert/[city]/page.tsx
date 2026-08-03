@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { cities, getCity, sharedFaq } from "@/data/cities";
 import FaqList from "@/components/FaqList";
+import TrackedLink from "@/components/TrackedLink";
 
 export function generateStaticParams() {
   return cities.map((c) => ({ city: c.slug }));
@@ -109,13 +110,16 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               full-funnel discipline to businesses in {c.name}.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 8 }}>
-              <Link
+              <TrackedLink
                 href="/#contact"
+                event="cta_click"
+                label="city_free_review"
+                location={`city_${c.slug}`}
                 className="btn-primary"
                 style={{ display: "inline-block", padding: "14px 28px", background: "var(--accent)", color: "var(--on-accent)", fontWeight: 600, fontSize: 15.5 }}
               >
                 Get a free campaign review
-              </Link>
+              </TrackedLink>
               <Link
                 href="/#work"
                 className="btn-outline"

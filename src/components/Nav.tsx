@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics";
 
 const links = [
   { href: "/#about", label: "About" },
@@ -68,6 +69,7 @@ export default function Nav() {
           <Link
             href="/#contact"
             className="nav-cta"
+            onClick={() => track("cta_click", { link_label: "nav_lets_talk", link_location: "nav" })}
             style={{
               display: "inline-block",
               padding: "10px 22px",
@@ -98,7 +100,15 @@ export default function Nav() {
             {l.label}
           </Link>
         ))}
-        <Link href="/#contact" className="nav-mobile-link" onClick={() => setOpen(false)} style={{ color: "var(--accent)" }}>
+        <Link
+          href="/#contact"
+          className="nav-mobile-link"
+          onClick={() => {
+            setOpen(false);
+            track("cta_click", { link_label: "nav_mobile_contact", link_location: "nav_mobile" });
+          }}
+          style={{ color: "var(--accent)" }}
+        >
           Contact →
         </Link>
       </div>

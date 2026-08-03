@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { caseStudies } from "@/data/caseStudies";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Google Ads Case Studies — Real Accounts, Real Results | Safi Jamil",
@@ -115,13 +115,16 @@ export default function CaseStudiesPage() {
               Detailed campaign structures, change history, and live account access can be
               demonstrated personally during a Zoom or Google Meet session.
             </p>
-            <Link
+            <TrackedLink
               href="/#contact"
+              event="cta_click"
+              label="case_studies_book_walkthrough"
+              location="case_studies"
               className="btn-primary"
               style={{ display: "inline-block", padding: "14px 30px", background: "var(--accent)", color: "var(--on-accent)", fontWeight: 600, fontSize: 15.5 }}
             >
               Book a walkthrough
-            </Link>
+            </TrackedLink>
           </div>
         </div>
       </main>
