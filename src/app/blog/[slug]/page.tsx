@@ -23,13 +23,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: {
+        openGraph: {
       type: "article",
       title: post.title,
       description: post.description,
       url: `https://safijamil.com/blog/${post.slug}`,
       publishedTime: post.date,
       authors: ["Safi Jamil"],
+      images: [
+        {
+          url: `/images/blog/${post.slug}.svg`,
+          width: 1200,
+          height: 480,
+          alt: post.title,
+        },
+      ],
     },
   };
 }
@@ -39,13 +47,20 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const post = getPost(slug);
   if (!post) notFound();
 
-  const jsonLd = {
+    const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
+    image: `https://safijamil.com/images/blog/${post.slug}.svg`,
     datePublished: post.date,
+    dateModified: post.date,
     author: {
+      "@type": "Person",
+      name: "Safi Jamil",
+      url: "https://safijamil.com",
+    },
+    publisher: {
       "@type": "Person",
       name: "Safi Jamil",
       url: "https://safijamil.com",
