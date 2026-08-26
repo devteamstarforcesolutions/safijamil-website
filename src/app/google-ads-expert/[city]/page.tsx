@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { cities, getCity, sharedFaq } from "@/data/cities";
+import { cities, getCity } from "@/data/cities";
 import FaqList from "@/components/FaqList";
 import TrackedLink from "@/components/TrackedLink";
 
@@ -55,7 +55,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const c = getCity(city);
   if (!c) notFound();
 
-  const faqs = [...c.faq, ...sharedFaq];
+    const faqs = c.faq;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
