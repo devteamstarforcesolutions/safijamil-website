@@ -53,8 +53,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     headline: post.title,
     description: post.description,
     image: `https://safijamil.com/images/blog/${post.slug}.svg`,
-    datePublished: post.date,
-    dateModified: post.date,
+        datePublished: post.date + "T00:00:00+00:00",
+    dateModified: post.date + "T00:00:00+00:00",
     author: {
       "@type": "Person",
       name: "Safi Jamil",
