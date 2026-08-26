@@ -55,7 +55,7 @@ export default function BlogIndex() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/images/blog/${p.slug}.svg`}
-                  alt={post.title}
+                  alt={p.title}
                   width={1200}
                   height={480}
                   style={{ width: "100%", height: "auto", display: "block", marginBottom: 20, border: "1px solid rgba(var(--accent-rgb),.14)" }}
