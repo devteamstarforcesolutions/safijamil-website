@@ -1,3 +1,4 @@
+import RelatedPosts from "@/components/RelatedPosts";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -46,6 +47,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+  const allPosts = publishedPosts();
 
     const jsonLd = {
     "@context": "https://schema.org",
@@ -147,6 +149,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               Get in touch
             </TrackedLink>
           </div>
+          <RelatedPosts current={post} allPosts={allPosts} />
         </article>
       </main>
       <Footer />
