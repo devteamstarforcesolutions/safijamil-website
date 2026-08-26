@@ -2,6 +2,58 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  async redirects() {
+    return [
+      // Old site had a /portfolio page — send it to the current equivalent.
+      {
+        source: "/portfolio",
+        destination: "/case-studies",
+        permanent: true,
+      },
+      {
+        source: "/portfolio/",
+        destination: "/case-studies",
+        permanent: true,
+      },
+      // Old site had a /free-ppc-audit page — send it to the contact section.
+      {
+        source: "/free-ppc-audit",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/free-ppc-audit/",
+        destination: "/#contact",
+        permanent: true,
+      },
+      // Old contact/about URLs — send to the current homepage sections.
+      {
+        source: "/contact",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/contact/",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/contact-me",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/contact-me/",
+        destination: "/#contact",
+        permanent: true,
+      },
+      {
+        source: "/about-me/",
+        destination: "/#about",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
