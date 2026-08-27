@@ -1,0 +1,35 @@
+# Safi Jamil
+
+> Brand strategist and Google Ads specialist in the PPC industry since 2018. Helps US-based e-commerce and service brands generate sales and leads through Google Ads and Meta (Facebook/Instagram) Ads, with full-funnel conversion tracking from click to closed customer. Currently managing $261,855+ in active ad spend across car rental, home services, paint, and retail businesses. Based in Lahore, Pakistan; works remotely with clients across the US and Pakistan.
+
+Safi Jamil is a Google Ads and Meta Ads specialist, not an agency — clients work directly with the person managing their account, not an account manager relaying instructions to someone else. Core services: Google Ads (Search, Performance Max, Shopping, Display), Meta Ads (Facebook & Instagram), conversion tracking (GA4, Google Tag Manager, server-side tracking, CallRail call tracking), landing page CRO and A/B testing, and click-fraud protection (ClickCease). Clients keep full ownership of their ad accounts and data at all times.
+
+## Services
+
+- [Google Ads Expert — Pakistan](https://safijamil.com/google-ads-expert): Overview of Google Ads and PPC management services for businesses in Pakistan.
+- [Google Ads Expert in Karachi](https://safijamil.com/google-ads-expert/karachi): PPC services for Karachi businesses, including e-commerce and area-level targeting.
+- [Google Ads Expert in Lahore](https://safijamil.com/google-ads-expert/lahore): PPC services for Lahore businesses, including fashion, food, and seasonal campaign strategy.
+- [Google Ads Expert in Islamabad](https://safijamil.com/google-ads-expert/islamabad): PPC services for Islamabad's professional-services market with call-tracking focus.
+- [Google Ads Expert in Rawalpindi](https://safijamil.com/google-ads-expert/rawalpindi): PPC services for the Rawalpindi/Islamabad twin-city market.
+- [Google Ads Expert in Faisalabad](https://safijamil.com/google-ads-expert/faisalabad): PPC services for Faisalabad's industrial, textile, and B2B export businesses.
+- [Google Ads Expert in Multan](https://safijamil.com/google-ads-expert/multan): PPC services for Multan businesses, with a lower-competition, lower-cost-per-lead market focus.
+- [Google Ads Expert in Peshawar](https://safijamil.com/google-ads-expert/peshawar): PPC services for Peshawar clinics, institutes, and mobile-first local businesses.
+- [Google Ads Expert in Sialkot](https://safijamil.com/google-ads-expert/sialkot): PPC services for Sialkot's export-focused manufacturers (sports goods, surgical instruments, leather).
+- [Case Studies](https://safijamil.com/case-studies): Live account screenshots and results from managed Google Ads and Meta Ads campaigns.
+
+## Insights (Blog)
+
+- [What $261K of Ad Spend Taught Me About Google Ads Account Structure](https://safijamil.com/blog/google-ads-account-structure): Campaign and ad group structure best practices, including 2026's AI Max for Search migration.
+- [The Conversion Tracking Stack Every Service Business Needs](https://safijamil.com/blog/conversion-tracking-stack): The exact GA4, GTM, CallRail, Clarity, and server-side tracking stack used before any campaign launches.
+- [Google Ads for Car Rental Companies: A Complete Playbook](https://safijamil.com/blog/google-ads-car-rental): Campaign architecture, airport-level location targeting, and call attribution for car rental businesses.
+- [How to Lower Cost Per Lead for Home Services with Google Ads](https://safijamil.com/blog/lower-cost-per-lead-home-services): Practical levers for reducing CPL, including 2026 Local Service Ads benchmark data.
+- [Performance Max vs Search Campaigns: When to Use Each](https://safijamil.com/blog/performance-max-vs-search): Decision framework for PMax, Search, and AI Max for Search in 2026.
+- [A/B Tests That Actually Moved Conversion Rates](https://safijamil.com/blog/ab-tests-that-moved-conversion-rates): Which landing page and ad tests reliably improve conversion rates, backed by 2026 industry data.
+- [Meta Ads vs Google Ads: Where Should a Small Business Spend First?](https://safijamil.com/blog/meta-ads-vs-google-ads): Framework for choosing between Google Ads and Meta Ads, including 2026 ad-revenue and cost benchmarks.
+- [How to Hire a Google Ads Expert (and What It Should Cost)](https://safijamil.com/blog/hire-google-ads-expert): What to look for when hiring a PPC specialist, red flags, certification verification, and 2026 pricing.
+
+## Contact
+
+- Email: safijamil.dev@gmail.com
+- LinkedIn: https://linkedin.com/in/safiullahjamil
+- Contact form: https://safijamil.com/#contact
