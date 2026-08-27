@@ -1,3 +1,4 @@
+import FaqList from "@/components/FaqList";
 import RelatedPosts from "@/components/RelatedPosts";
 import type { Metadata } from "next";
 import Link from "next/link";
