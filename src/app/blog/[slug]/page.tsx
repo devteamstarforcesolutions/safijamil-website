@@ -71,12 +71,23 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     mainEntityOfPage: `https://safijamil.com/blog/${post.slug}`,
   };
 
+    const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
       <Nav />
       <main className="section" style={{ paddingTop: 150, minHeight: "70vh" }}>
         <article style={{ maxWidth: 760, margin: "0 auto" }}>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
           <Link href="/blog" style={{ fontSize: 14 }}>
             ← All posts
           </Link>
@@ -149,6 +160,21 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             >
               Get in touch
             </TrackedLink>
+          </div>
+                    <div style={{ marginTop: 56 }}>
+            <div
+              style={{
+                fontFamily: "var(--font-space-grotesk), sans-serif",
+                fontSize: 13,
+                letterSpacing: 2.5,
+                color: "var(--accent)",
+                textTransform: "uppercase",
+                marginBottom: 20,
+              }}
+            >
+              FAQ
+            </div>
+            <FaqList faqs={post.faq} firstOpen={false} />
           </div>
           <RelatedPosts current={post} allPosts={allPosts} />
         </article>
