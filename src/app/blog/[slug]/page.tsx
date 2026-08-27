@@ -81,6 +81,16 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     })),
   };
 
+    const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://safijamil.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://safijamil.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://safijamil.com/blog/${post.slug}` },
+    ],
+  };
+
   return (
     <>
       <Nav />
@@ -88,6 +98,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <article style={{ maxWidth: 760, margin: "0 auto" }}>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
           <Link href="/blog" style={{ fontSize: 14 }}>
             ← All posts
           </Link>
