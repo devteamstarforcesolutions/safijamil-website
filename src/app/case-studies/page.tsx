@@ -23,8 +23,37 @@ const labelStyle: React.CSSProperties = {
 };
 
 export default function CaseStudiesPage() {
+    const caseStudiesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Google Ads Case Studies — Safi Jamil",
+    description:
+      "Nine screenshot-backed Google Ads case studies from live, actively managed accounts across US transportation, e-commerce, healthcare, and education.",
+    itemListElement: caseStudies.map((cs, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        name: `Google Ads Management — ${cs.name} (${cs.industry})`,
+        description: `${cs.strategy.join(" ")} Key results: ${cs.stats
+          .map((s) => `${s.value} ${s.label}`)
+          .join(", ")}.`,
+        serviceType: "Google Ads Management",
+        areaServed: cs.location,
+        provider: {
+          "@type": "Person",
+          name: "Safi Jamil",
+          url: "https://safijamil.com",
+        },
+      },
+    })),
+  };
   return (
     <>
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesJsonLd) }}
+      />
       <Nav />
       <main className="section" style={{ paddingTop: 150 }}>
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
