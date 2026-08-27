@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   if (!c) return {};
   const title = `Google Ads Expert in ${c.name} — PPC & Performance Marketing | Safi Jamil`;
   const description = `Hire a Google Ads specialist for your ${c.name} business. PPC campaigns, Meta Ads, and full conversion tracking from Safi Jamil — in the PPC industry since 2018, managing $261K+ in active ad spend.`;
-  return {
+    return {
     title,
     description,
     keywords: [
@@ -28,7 +28,26 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
       "google ads specialist pakistan",
     ],
     alternates: { canonical: `/google-ads-expert/${c.slug}` },
-    openGraph: { title, description, url: `https://safijamil.com/google-ads-expert/${c.slug}` },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url: `https://safijamil.com/google-ads-expert/${c.slug}`,
+      images: [
+        {
+          url: "/images/safi-jamil.jpeg",
+          width: 1122,
+          height: 1402,
+          alt: `Google Ads Expert in ${c.name} — Safi Jamil`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/safi-jamil.jpeg"],
+    },
   };
 }
 
