@@ -11,6 +11,28 @@ export const metadata: Metadata = {
     "Screenshot-backed Google Ads case studies from live accounts: $711K spend scaled to $1.18M conversion value, 6.8x ROAS e-commerce, Rs 78 cost-per-lead campaigns, and more. Client names masked for confidentiality.",
   keywords: ["google ads case studies", "ppc case study", "google ads results", "google ads portfolio"],
   alternates: { canonical: "/case-studies" },
+  openGraph: {
+    type: "website",
+    title: "Google Ads Case Studies — Real Accounts, Real Results | Safi Jamil",
+    description:
+      "Screenshot-backed Google Ads case studies from live accounts: $711K spend scaled to $1.18M conversion value, 6.8x ROAS e-commerce, Rs 78 cost-per-lead campaigns, and more.",
+    url: "https://safijamil.com/case-studies",
+    images: [
+      {
+        url: "/images/case-studies/royal-ca-limo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Google Ads case studies — real account screenshots and results",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Google Ads Case Studies — Real Accounts, Real Results | Safi Jamil",
+    description:
+      "Screenshot-backed Google Ads case studies from live accounts: $711K spend scaled to $1.18M conversion value, 6.8x ROAS e-commerce.",
+    images: ["/images/case-studies/royal-ca-limo.jpg"],
+  },
 };
 
 const labelStyle: React.CSSProperties = {
