@@ -55,7 +55,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const c = getCity(city);
   if (!c) notFound();
 
-    const faqs = c.faq;
+  const faqs = c.faq;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -79,6 +79,15 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://safijamil.com" },
+      { "@type": "ListItem", position: 2, name: "Google Ads Expert", item: "https://safijamil.com/google-ads-expert" },
+      { "@type": "ListItem", position: 3, name: c.name, item: `https://safijamil.com/google-ads-expert/${c.slug}` },
+    ],
+  };
 
   return (
     <>
@@ -86,6 +95,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       <main style={{ paddingTop: 76 }}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
         <section className="section" style={{ borderTop: "none" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
