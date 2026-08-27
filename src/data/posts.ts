@@ -6,6 +6,7 @@ export type Post = {
   tag: string;
   keywords: string[];
   content: string; // markdown-lite: ## headings, - lists, blank-line paragraphs
+  faq: { q: string; a: string }[];
 };
 
 export const posts: Post[] = [
@@ -63,6 +64,20 @@ The real reason structure matters: it decides what you can measure. When each ca
  
 If your account has grown into a tangle, a restructure usually pays for itself within a quarter. That's typically the first thing I audit for a new client — before touching bids, before touching creative, before anything else.
 `,
+        faq: [
+      {
+        q: "How many keywords should be in a Google Ads ad group in 2026?",
+        a: "Single Theme Ad Groups (STAGs) with 3 to 10 tightly themed keywords are the current best practice — enough for Smart Bidding to learn from, tight enough to keep ad copy relevant. An ad group pulling fewer than roughly 15 conversions a month doesn't have enough data density to optimize well.",
+      },
+      {
+        q: "Should I separate brand and non-brand campaigns in Google Ads?",
+        a: "Yes, always. Brand terms convert far cheaper than generic terms, and mixing them into one campaign hides how your actual growth keywords are performing. Split them, protect brand with its own budget, and add brand terms as negatives elsewhere so automated campaigns like Performance Max can't claim credit for demand that already existed.",
+      },
+      {
+        q: "What is AI Max for Search?",
+        a: "AI Max is a native automation layer Google rolled out on Search campaigns in 2026. It expands keyword matching, generates ad copy variations, and can select landing pages automatically — without moving the campaign into full Performance Max. It's enabled by default on many new campaigns, so it's worth checking whether it's already running on yours.",
+      },
+    ],
   },
   {
     slug: "conversion-tracking-stack",
@@ -128,6 +143,20 @@ Competitors and bots click ads. On high cost-per-click service keywords, click f
 
 Every account I run has this stack, which is why every report I send a client shows real leads and real cost per lead, not clicks and hope.
 `,
+        faq: [
+      {
+        q: "What conversion tracking tools do I need before running Google Ads?",
+        a: "At minimum: Google Tag Manager as the tag foundation, GA4 configured around lead events (not pageviews), and call tracking (like CallRail) if phone leads matter to your business. Microsoft Clarity for session recordings and ClickCease for fraud protection round out a complete stack.",
+      },
+      {
+        q: "Is server-side tracking necessary in 2026?",
+        a: "For most businesses running meaningful ad spend, yes. Browser-based pixel tracking has degraded due to ad blockers, cookie consent rejections, and browser restrictions, which means Smart Bidding may be training on incomplete conversion data. Server-side tracking (often via server-side GTM) recovers a meaningful share of that lost signal.",
+      },
+      {
+        q: "What are Enhanced Conversions in Google Ads?",
+        a: "Enhanced Conversions send hashed first-party customer data — like email or phone number — alongside a conversion event, which helps Google match conversions that cookie-based tracking alone would miss. It's a Google-native feature that works alongside, not instead of, your existing GA4 and GTM setup.",
+      },
+    ],
   },
   {
     slug: "google-ads-car-rental",
@@ -188,6 +217,20 @@ The click is expensive, so the ad should filter and the CTA should match how rea
 
 Car rental rewards operators who measure properly and punish everyone else. If your account reports clicks instead of bookings, that's the first thing to fix.
 `,
+        faq: [
+      {
+        q: "How should I structure Google Ads campaigns for a car rental business?",
+        a: "A five-layer structure works best: brand campaigns to protect your name, high-intent non-brand campaigns for terms like '[city] car rental', location-based campaigns for local and mobile intent, Performance Max for Maps/YouTube/Display demand, and retargeting for people who compared prices but didn't book.",
+      },
+      {
+        q: "Should car rental keywords be targeted by airport?",
+        a: "Yes — location is an intent signal in this category, not just a targeting setting. Someone searching from an airport terminal needs a car within hours; someone searching from home may be planning weeks ahead. Structuring campaigns around pickup location, with airport-level bidding, captures that difference instead of averaging it away.",
+      },
+      {
+        q: "What metric matters most in car rental PPC?",
+        a: "Cost per booking — calls plus form fills — not cost per click. A large share of rental bookings happen by phone, so without call tracking (like CallRail), the account is optimizing on incomplete data and understating its own performance.",
+      },
+    ],
   },
   {
     slug: "lower-cost-per-lead-home-services",
@@ -243,6 +286,20 @@ Import offline outcomes — which leads became booked jobs — back into Google 
 
 Pulled together, these typically bring cost per lead down quarter over quarter — which is exactly the trend I report to my home services clients. No single trick, just disciplined iteration with full tracking underneath it, and the right channel mix from the start.
 `,
+        faq: [
+      {
+        q: "What's a good cost per lead for home services in 2026?",
+        a: "Recent industry benchmark data puts blended Local Service Ads cost per lead at around $53, versus roughly $104 for blended standard Google Ads and $149 for non-branded Google Ads specifically. The right number for your business depends on your trade and market, but if you're paying well above $100/lead on standard Search alone, it's worth checking whether Local Service Ads is even in the mix.",
+      },
+      {
+        q: "How can I lower my Google Ads cost per lead for a home services business?",
+        a: "The highest-impact levers, in order: cut keywords producing clicks but no leads via a search terms report, match your ad schedule to when you can actually answer, send each service to its own landing page instead of a shared homepage, and import which leads became booked jobs back into Google Ads so Smart Bidding optimizes toward real customers.",
+      },
+      {
+        q: "Should I use Local Service Ads or standard Google Ads for home services?",
+        a: "Usually both, measured against each other honestly. LSA tends to produce cheaper leads with a higher book rate for eligible categories, but has its own volume and service-area limits. Standard Search fills the gaps LSA can't reach and gives more control over keywords and messaging.",
+      },
+    ],
   },
   {
     slug: "performance-max-vs-search",
@@ -294,6 +351,20 @@ Treat it as its own decision, not an automatic yes. Run it as a deliberate test 
 
 Don't judge these against each other on cost per conversion alone, and don't assume more automation is automatically better in 2026 just because Google keeps shipping more of it. Search harvests demand that exists; PMax creates and captures demand that didn't; AI Max sits between them, expanding what Search can reach without fully handing over control. They're complementary layers of one system — which is why the accounts I run use all three deliberately, with someone actually watching what each one is doing, rather than betting everything on automation and checking in once a quarter.
 `,
+        faq: [
+      {
+        q: "Should I use Performance Max or Search campaigns?",
+        a: "It depends on your data maturity and business type. For a new account, run Search only until you have 30+ conversions — Performance Max without conversion data is spending blind. For an established service business, a 70-80% Search / 20-30% PMax split is a reasonable starting point; e-commerce with a product feed often shifts more weight toward PMax.",
+      },
+      {
+        q: "What is the difference between Performance Max and AI Max for Search?",
+        a: "Performance Max is a separate, fully automated campaign type that spans Search, Shopping, Display, YouTube, Gmail, and Maps. AI Max for Search is a lighter automation layer applied on top of an existing Search campaign — it expands keyword matching and generates ad variations without moving you into a full PMax structure.",
+      },
+      {
+        q: "Does Performance Max compete with my Search campaigns?",
+        a: "It shouldn't in theory — Google states ad-serving systems decide which campaign enters an auction based on relevance and Ad Rank. In practice, without brand exclusions and clean conversion data feeding PMax, it can claim credit for demand your Search or brand campaigns would have captured anyway. That's why guardrails matter more than the campaign type itself.",
+      },
+    ],
   },
   {
     slug: "ab-tests-that-moved-conversion-rates",
@@ -342,6 +413,20 @@ Only a minority of companies test their landing pages in any structured way, des
 
 The meta-lesson: tests that reduce friction or sharpen the promise win; cosmetic tests don't. Spend your traffic on experiments with a hypothesis about visitor behavior, not decoration.
 `,
+        faq: [
+      {
+        q: "What landing page elements should I A/B test first?",
+        a: "Start with headline-to-keyword match, form length (shorter usually wins for first contact), CTA placement above the fold, and phone-first layouts on mobile for service businesses. These consistently move conversion rates. Button colors and slider images, by contrast, rarely produce a significant result.",
+      },
+      {
+        q: "How long should a landing page A/B test run?",
+        a: "Pre-commit to a sample size before starting, and expect it to take a few weeks — the median honest test in current industry data runs around three weeks. Stopping early because one day looks exciting is the most common way tests get misread.",
+      },
+      {
+        q: "What percentage of A/B tests actually win?",
+        a: "Most don't. Across large-scale analysis of experimentation platform data, only around 13% of tests reach statistical significance in favor of the new variant — the rest are either losses or inconclusive. That's normal; the value is in running enough of them with a real hypothesis, not in any single test succeeding.",
+      },
+    ],
   },
   {
     slug: "meta-ads-vs-google-ads",
@@ -395,6 +480,20 @@ Splitting a small budget across both platforms on day one guarantees neither get
 
 Pick the platform that matches how your customers buy, measure honestly, then expand. That's the whole framework — 2026 ad-revenue headlines included.
 `,
+        faq: [
+      {
+        q: "Should a small business start with Meta Ads or Google Ads?",
+        a: "It depends on whether your customer already knows they need you. If people actively search for your service — an emergency electrician, a local house cleaner — start with Google Ads, which captures existing demand. If your product is visual or impulse-friendly and nobody searches for it by name, start with Meta, which creates demand instead of capturing it.",
+      },
+      {
+        q: "Is Meta Ads cheaper than Google Ads in 2026?",
+        a: "Cost per click is generally lower on Meta, but that's the wrong number to compare. Google's higher-cost clicks come from existing search intent and convert at higher rates, so a 'cheap' Meta click that doesn't convert can cost more per customer than an 'expensive' Google click that does. Compare cost per acquisition relative to customer value, not cost per click alone.",
+      },
+      {
+        q: "Can I run both Google Ads and Meta Ads with a small budget?",
+        a: "Not effectively on day one. Splitting a small budget across both platforms means neither gets enough data for its algorithm to optimize. The better sequence is one platform for the first 1-2 months until cost per lead is stable, then adding the second — which usually performs faster because it benefits from lessons the first platform already taught you.",
+      },
+    ],
   },
   {
     slug: "hire-google-ads-expert",
@@ -453,6 +552,20 @@ What matters more than which tier you pick: management fees should be justified 
 
 Ask them what success looks like in 90 days. The right hire answers with a number you care about — leads, bookings, sales — and a plan to measure it. That's the entire job.
 `,
+        faq: [
+      {
+        q: "How much does it cost to hire a Google Ads expert in 2026?",
+        a: "Freelancers typically run $50-150/hour or $500-1,500/month in flat retainers for small-to-mid accounts. Boutique agencies run $750-2,500/month, often with a minimum spend requirement, plus a flat fee or 10-20% of spend. Senior consultants for complex accounts run $150-300+/hour. What matters more than the tier is whether the fee is justified by the spend it's managing.",
+      },
+      {
+        q: "How do I verify a Google Ads specialist's certification?",
+        a: "Ask for their public Google Skillshop profile link — not a screenshot — so you can check it yourself. Confirm which specific certifications they hold (Search, Performance Max, and Measurement matter most for typical accounts) and check the renewal date, since Google certifications expire and need to be kept current.",
+      },
+      {
+        q: "What's the biggest red flag when hiring a PPC freelancer or agency?",
+        a: "Guaranteed rankings or guaranteed results — nobody controls the ad auction, so that promise is a warning sign, not reassurance. Other red flags: no questions about your business economics, refusing to give you admin access to your own ad account, and reporting on clicks or impressions while avoiding cost per lead.",
+      },
+    ],
   },
 ];
 
